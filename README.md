@@ -33,25 +33,9 @@ when using the common display temperature of 6500K.
 
 ## Screenshots
 
-**Ruby**:
-
-![Ruby](screenshots/ruby.png)
-
-**Rust**:
-
-![Rust](screenshots/rust.png)
-
-**Lua**:
-
-![Lua](screenshots/lua.png)
-
-**SQL**:
-
-![SQL](screenshots/sql.png)
-
-**NeoVim terminal**:
-
-![Terminal](screenshots/terminal.png)
+| Ruby                          | Rust                          | Lua                         | SQL                         | NeoVim Terminal
+|:------------------------------|:------------------------------|:----------------------------|:----------------------------|:----------------
+| ![Ruby](screenshots/ruby.png) | ![Rust](screenshots/rust.png) | ![Lua](screenshots/lua.png) | ![SQL](screenshots/sql.png) | ![Terminal](screenshots/terminal.png)
 
 ## Terminal colors
 
