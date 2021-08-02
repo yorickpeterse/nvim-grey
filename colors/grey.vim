@@ -206,6 +206,10 @@ hi! link diffChanged DiffChange
 hi! link diffRemoved DiffDelete
 hi! link dotKeyChar Operator
 
+" diffview.nvim
+Hi DiffviewFilePanelFileName black NONE NONE
+Hi DiffviewFilePanelPath purple NONE NONE
+
 " Fugitive
 Hi FugitiveblameTime blue NONE NONE
 Hi FugitiveblameHash purple NONE NONE
