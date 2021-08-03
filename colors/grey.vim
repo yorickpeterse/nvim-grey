@@ -351,6 +351,7 @@ Hi TSEmphasis NONE NONE italic
 Hi TSUnderline NONE NONE underline
 Hi TSURI cyan NONE underline
 Hi TSNote yellow NONE bold
+Hi TSField purple NONE NONE
 
 hi! link TSSymbol Symbol
 hi! link TSStringRegex Regexp
@@ -359,6 +360,11 @@ hi! link TSNamespace Constant
 hi! link TSWarning WarningMsg
 hi! link TSKeywordOperator Keyword
 hi! link TSTypeBuiltin Keyword
+hi! link TSProperty TSField
+
+" Ruby uses "TSLabel" for instance variables, for some reason. See
+" https://github.com/tree-sitter/tree-sitter-ruby/issues/184 for more details.
+hi! link rubyTSLabel TSField
 
 " Vimscript
 hi! link VimCommentTitle Todo
