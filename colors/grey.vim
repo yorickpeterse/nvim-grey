@@ -135,7 +135,8 @@ Hi LineNr black NONE NONE
 Hi Macro orange NONE NONE
 Hi MatchParen NONE NONE bold
 Hi MoreMsg black NONE NONE
-Hi NonText background NONE NONE
+Hi NonText lgrey1 NONE NONE
+Hi EndOfBuffer background background NONE
 Hi Normal black background NONE
 Hi NormalFloat black background NONE
 Hi Number blue NONE NONE
@@ -148,6 +149,7 @@ Hi PreProc black NONE NONE
 Hi Question black NONE NONE
 Hi QuickFixLine NONE lgrey2 bold
 Hi Regexp orange NONE NONE
+Hi Symbol orange NONE NONE
 Hi Search NONE lyellow NONE
 Hi Special black NONE NONE
 Hi SpellBad red NONE bold,undercurl
@@ -176,7 +178,7 @@ hi! link SignColumn FoldColumn
 hi! link SpecialKey Number
 hi! link Statement Keyword
 hi! link StorageClass Keyword
-hi! link Type Keyword
+hi! link Type Constant
 hi! link Visual Cursor
 hi! link WildMenu PmenuSel
 
@@ -306,7 +308,7 @@ hi! link rubyRegexpDelimiter Regexp
 hi! link rubyRegexpQuantifier Regexp
 hi! link rubyRegexpSpecial Regexp
 hi! link rubyStringDelimiter String
-hi! link rubySymbol Regexp
+hi! link rubySymbol Symbol
 
 " Rust
 hi! link rustCommentBlockDoc Comment
@@ -341,6 +343,23 @@ Hi TelescopeSelection NONE lgrey1 bold
 Hi TelescopeMatching yellow NONE bold
 Hi TelescopeBorder lgrey1 NONE NONE
 Hi TelescopePromptPrefix black NONE bold
+
+" Treesitter
+Hi TSStringEscape green NONE bold
+Hi TSStrong NONE NONE bold
+Hi TSEmphasis NONE NONE italic
+Hi TSUnderline NONE NONE underline
+Hi TSURI cyan NONE underline
+Hi TSNote yellow NONE bold
+
+hi! link TSSymbol Symbol
+hi! link TSStringRegex Regexp
+hi! link TSConstMacro Macro
+hi! link TSNamespace Constant
+hi! link TSWarning WarningMsg
+hi! link TSError ErrorMsg
+hi! link TSKeywordOperator Keyword
+hi! link TSTypeBuiltin Keyword
 
 " Vimscript
 hi! link VimCommentTitle Todo
