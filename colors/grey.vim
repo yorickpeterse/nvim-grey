@@ -357,7 +357,6 @@ hi! link TSStringRegex Regexp
 hi! link TSConstMacro Macro
 hi! link TSNamespace Constant
 hi! link TSWarning WarningMsg
-hi! link TSError ErrorMsg
 hi! link TSKeywordOperator Keyword
 hi! link TSTypeBuiltin Keyword
 
