@@ -335,6 +335,12 @@ hi! link typescriptFunction Function
 hi! link typescriptIdentifier Identifier
 hi! link typescriptLogicSymbols Operator
 
+" Telescope
+Hi TelescopeSelection NONE lgrey1 bold
+Hi TelescopeMatching yellow NONE bold
+Hi TelescopeBorder lgrey1 NONE NONE
+Hi TelescopePromptPrefix black NONE bold
+
 " Vimscript
 hi! link VimCommentTitle Todo
 hi! link VimIsCommand Constant
