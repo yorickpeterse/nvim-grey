@@ -358,7 +358,9 @@ hi! link TSSymbol Symbol
 hi! link TSStringRegex Regexp
 hi! link TSConstMacro Macro
 hi! link TSNamespace Constant
-hi! link TSWarning WarningMsg
+hi! link TSWarning Todo
+hi! link TSNote Todo
+hi! link TSDanger Todo
 hi! link TSKeywordOperator Keyword
 hi! link TSTypeBuiltin Keyword
 hi! link TSProperty TSField
@@ -366,6 +368,14 @@ hi! link TSProperty TSField
 " Ruby uses "TSLabel" for instance variables, for some reason. See
 " https://github.com/tree-sitter/tree-sitter-ruby/issues/184 for more details.
 hi! link rubyTSLabel InstanceVariable
+
+" TOML
+"
+" tomlTSTypeBuiltin is used for section titles (e.g. `[dependencies]`), while
+" tomlTSProperty is used for key-value pairs. These rules ensure the syntax is
+" consistent with https://github.com/cespare/vim-toml.
+Hi tomlTSTypeBuiltin black NONE bold
+Hi tomlTSProperty black NONE nocombine
 
 " Vimscript
 hi! link VimCommentTitle Todo
