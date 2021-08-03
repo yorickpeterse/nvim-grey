@@ -167,6 +167,7 @@ Hi Todo grey NONE bold
 Hi Underlined NONE NONE underline
 Hi VertSplit lgrey1 NONE NONE
 Hi WarningMsg orange NONE bold
+Hi InstanceVariable purple NONE NONE
 
 hi! link Boolean Keyword
 hi! link Character String
@@ -244,7 +245,7 @@ Hi inkoCommentBold grey NONE bold
 Hi inkoCommentItalic grey NONE italic
 Hi inkoCommentTitle grey NONE bold
 hi! link inkoCommentInlineUrl Number
-hi! link inkoInstanceVariable Directory
+hi! link inkoInstanceVariable InstanceVariable
 hi! link inkoKeywordArgument Regexp
 
 " Java
@@ -299,7 +300,7 @@ hi! link rubyClassVariable rubyInstancevariable
 hi! link rubyConstant Constant
 hi! link rubyDefine Keyword
 hi! link rubyFunction Function
-hi! link rubyInstanceVariable Directory
+hi! link rubyInstanceVariable InstanceVariable
 hi! link rubyMacro Identifier
 hi! link rubyModule rubyClass
 hi! link rubyRegexp Regexp
@@ -351,7 +352,7 @@ Hi TSEmphasis NONE NONE italic
 Hi TSUnderline NONE NONE underline
 Hi TSURI cyan NONE underline
 Hi TSNote yellow NONE bold
-Hi TSField purple NONE NONE
+Hi TSField NONE NONE NONE
 
 hi! link TSSymbol Symbol
 hi! link TSStringRegex Regexp
@@ -364,7 +365,7 @@ hi! link TSProperty TSField
 
 " Ruby uses "TSLabel" for instance variables, for some reason. See
 " https://github.com/tree-sitter/tree-sitter-ruby/issues/184 for more details.
-hi! link rubyTSLabel TSField
+hi! link rubyTSLabel InstanceVariable
 
 " Vimscript
 hi! link VimCommentTitle Todo
