@@ -115,6 +115,7 @@ Hi WhiteOnRed white red NONE
 Hi BlackOnLightYellow black lyellow NONE
 Hi Yellow yellow NONE bold
 Hi LightRedBackground NONE lred NONE
+Hi WhiteOnBlue white blue NONE
 
 Hi Bold black NONE bold
 Hi ColorColumn NONE lgrey4 NONE
