@@ -66,7 +66,8 @@ let s:colors = {
 \  'lgrey3': '#aaaaaa',
 \  'lgrey4': '#eeeeee',
 \  'yellow': '#bf8f00',
-\  'lyellow': '#f9e595',
+\  'lyellow1': '#f9e595',
+\  'lyellow2': '#f9efc7',
 \  'orange': '#a55000',
 \  'purple': '#5c21a5',
 \  'white': '#ffffff',
@@ -112,7 +113,7 @@ Hi Disabled NONE NONE NONE
 Hi WhiteOnOrange white orange NONE
 Hi WhiteOnYellow white yellow NONE
 Hi WhiteOnRed white red NONE
-Hi BlackOnLightYellow black lyellow NONE
+Hi BlackOnLightYellow black lyellow1 NONE
 Hi Yellow yellow NONE bold
 Hi LightRedBackground NONE lred NONE
 Hi WhiteOnBlue white blue NONE
@@ -129,7 +130,7 @@ Hi Directory purple NONE NONE
 Hi ErrorMsg red NONE bold
 Hi FoldColumn lgrey1 background NONE
 Hi Identifier black NONE NONE
-Hi IncSearch NONE lyellow NONE
+Hi IncSearch NONE lyellow1 NONE
 Hi Include black NONE bold
 Hi Keyword black NONE bold
 Hi LineNr black NONE NONE
@@ -151,7 +152,7 @@ Hi Question black NONE NONE
 Hi QuickFixLine NONE lgrey2 bold
 Hi Regexp orange NONE NONE
 Hi Symbol orange NONE NONE
-Hi Search NONE lyellow NONE
+Hi Search NONE lyellow1 NONE
 Hi Special black NONE NONE
 Hi SpellBad red NONE bold,undercurl
 Hi SpellCap purple NONE undercurl
@@ -202,7 +203,7 @@ hi! link cssTagName Keyword
 Hi DiffAdd NONE lgreen NONE
 Hi DiffChange NONE NONE NONE
 Hi DiffDelete red NONE NONE
-Hi DiffText NONE lgreen NONE
+Hi DiffText NONE lyellow2 NONE
 Hi diffFile black NONE bold
 Hi diffLine blue NONE NONE
 hi! link diffAdded DiffAdd
