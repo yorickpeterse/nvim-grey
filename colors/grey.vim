@@ -215,6 +215,7 @@ hi! link dotKeyChar Operator
 Hi DiffviewFilePanelFileName black NONE NONE
 Hi DiffviewFilePanelPath purple NONE NONE
 Hi DiffviewCursorLine NONE lgrey1 NONE
+Hi DiffviewDiffAddAsDelete NONE lred NONE
 
 " Fugitive
 Hi FugitiveblameTime blue NONE NONE
