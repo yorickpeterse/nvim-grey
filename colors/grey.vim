@@ -278,6 +278,12 @@ Hi DiagnosticUnderlineWarn NONE NONE undercurl yellow
 hi! link LspDiagnosticsUnderlineError DiagnosticUnderlineError
 hi! link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
 
+" Floating highlights are a bit too distracting, so they are disabled
+hi! clear DiagnosticFloatingError
+hi! clear DiagnosticFloatingWarn
+hi! clear DiagnosticFloatingInfo
+hi! clear DiagnosticFloatingHint
+
 " Make
 hi! link makeTarget Function
 
