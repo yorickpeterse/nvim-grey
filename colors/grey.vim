@@ -273,8 +273,10 @@ hi! link jsonKeyword String
 hi! link luaFunction Keyword
 
 " LSP
-Hi LspDiagnosticsUnderlineError NONE NONE undercurl red
-Hi LspDiagnosticsUnderlineWarning NONE NONE undercurl yellow
+Hi DiagnosticUnderlineError NONE NONE undercurl red
+Hi DiagnosticUnderlineWarning NONE NONE undercurl yellow
+hi! link LspDiagnosticsUnderlineError DiagnosticUnderlineError
+hi! link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarning
 
 " Make
 hi! link makeTarget Function
