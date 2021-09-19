@@ -279,10 +279,10 @@ hi! link LspDiagnosticsUnderlineError DiagnosticUnderlineError
 hi! link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
 
 " Floating highlights are a bit too distracting, so they are disabled
-hi! clear DiagnosticFloatingError
-hi! clear DiagnosticFloatingWarn
-hi! clear DiagnosticFloatingInfo
-hi! clear DiagnosticFloatingHint
+Hi DiagnosticFloatingError black background NONE
+Hi DiagnosticFloatingWarn black background NONE
+Hi DiagnosticFloatingInfo black background NONE
+Hi DiagnosticFloatingHint black background NONE
 
 " Make
 hi! link makeTarget Function
