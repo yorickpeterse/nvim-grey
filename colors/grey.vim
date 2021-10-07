@@ -284,6 +284,11 @@ Hi DiagnosticFloatingWarn black background NONE
 Hi DiagnosticFloatingInfo black background NONE
 Hi DiagnosticFloatingHint black background NONE
 
+Hi DiagnosticError red NONE bold
+Hi DiagnosticWarn yellow NONE bold
+Hi DiagnosticInfo blue NONE bold
+Hi DiagnosticHint grey NONE bold
+
 " Make
 hi! link makeTarget Function
 
