@@ -168,7 +168,7 @@ Hi Title black NONE bold
 Hi Todo grey NONE bold
 Hi Underlined NONE NONE underline
 Hi VertSplit lgrey1 NONE NONE
-Hi WarningMsg orange NONE bold
+Hi WarningMsg yellow NONE bold
 Hi InstanceVariable purple NONE NONE
 
 hi! link Boolean Keyword
@@ -188,8 +188,8 @@ hi! link WildMenu PmenuSel
 " ALE
 Hi ALEError red NONE bold
 Hi ALEErrorSign red NONE bold
-Hi ALEWarning orange NONE bold
-Hi ALEWarningSign orange NONE bold
+Hi ALEWarning yellow NONE bold
+Hi ALEWarningSign yellow NONE bold
 
 " CSS
 hi! link cssClassName Keyword
