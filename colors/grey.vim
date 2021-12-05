@@ -159,7 +159,7 @@ Hi SpellCap purple NONE undercurl
 Hi SpellLocal green NONE undercurl
 Hi SpellRare purple NONE undercurl
 Hi StatusLine black lgrey1 NONE
-Hi StatusLineNC black lgrey1 NONE
+Hi StatusLineNC black lgrey4 NONE
 Hi String green NONE NONE
 Hi TabLine dgrey lgrey1 NONE
 Hi TabLineFill black lgrey1 NONE
