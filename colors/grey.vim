@@ -154,10 +154,10 @@ Hi Regexp orange NONE NONE
 Hi Symbol orange NONE NONE
 Hi Search NONE lyellow1 NONE
 Hi Special black NONE NONE
-Hi SpellBad red NONE bold,undercurl
-Hi SpellCap purple NONE undercurl
-Hi SpellLocal green NONE undercurl
-Hi SpellRare purple NONE undercurl
+Hi SpellBad red NONE bold,underline
+Hi SpellCap purple NONE underline
+Hi SpellLocal green NONE underline
+Hi SpellRare purple NONE underline
 Hi StatusLine black lgrey1 NONE
 Hi StatusLineNC black lgrey4 NONE
 Hi String green NONE NONE
@@ -273,8 +273,8 @@ hi! link jsonKeyword String
 hi! link luaFunction Keyword
 
 " LSP
-Hi DiagnosticUnderlineError NONE NONE undercurl red
-Hi DiagnosticUnderlineWarn NONE NONE undercurl yellow
+Hi DiagnosticUnderlineError NONE NONE underline red
+Hi DiagnosticUnderlineWarn NONE NONE underline yellow
 hi! link LspDiagnosticsUnderlineError DiagnosticUnderlineError
 hi! link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
 
