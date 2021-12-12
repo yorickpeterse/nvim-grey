@@ -123,7 +123,8 @@ Hi ColorColumn NONE lgrey4 NONE
 Hi Comment grey NONE NONE
 Hi Conceal NONE NONE NONE
 Hi Constant black NONE NONE
-Hi Cursor NONE lgrey1 NONE
+Hi Cursor NONE black NONE
+Hi Visual NONE lgrey1 NONE
 Hi CursorLine NONE lgrey4 NONE
 Hi CursorLineNR black NONE bold
 Hi Directory purple NONE NONE
@@ -182,7 +183,6 @@ hi! link SpecialKey Number
 hi! link Statement Keyword
 hi! link StorageClass Keyword
 hi! link Type Constant
-hi! link Visual Cursor
 hi! link WildMenu PmenuSel
 
 " ALE
