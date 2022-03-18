@@ -202,7 +202,7 @@ hi! link cssTagName Keyword
 " Diffs
 Hi DiffAdd NONE lgreen NONE
 Hi DiffChange NONE NONE NONE
-Hi DiffDelete red NONE NONE
+Hi DiffDelete lgrey1 NONE NONE
 Hi DiffText NONE lyellow2 NONE
 Hi diffFile black NONE bold
 Hi diffLine blue NONE NONE
