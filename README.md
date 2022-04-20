@@ -1,9 +1,9 @@
 # Grey
 
 A low-contrast theme for NeoVim, based on
-[vim-paper](https://gitlab.com/yorickpeterse/vim-paper). Paper was the first
-light theme I used/created after years of using dark themes. The rationale for
-that was as follows:
+[vim-paper](https://gitlab.com/yorickpeterse/vim-paper) and written in Lua
+(using `nvim_set_hl()`). Paper was the first light theme I used/created after
+years of using dark themes. The rationale for that was as follows:
 
 > I created Paper as a replacement for [Happy
 > Hacking](https://gitlab.com/yorickpeterse/happy_hacking.vim), and the
@@ -62,12 +62,8 @@ For the text and highlight/selection color:
 
 ## Requirements
 
-* NeoVim
+* NeoVim 0.7.0 or newer (due to the use of `nvim_set_hl()`)
 * true-color support
-
-Support for regular Vim isn't planned. Once NeoVim provides a stable API for
-defining highlight groups (that doesn't involve just running the `hi` command),
-we plan to use Lua for the theme.
 
 ## Installation
 
