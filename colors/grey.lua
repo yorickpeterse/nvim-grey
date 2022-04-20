@@ -57,320 +57,318 @@ g.terminal_color_13 = purple
 g.terminal_color_14 = cyan
 g.terminal_color_15 = lgrey3
 
-local function hi(group, options)
-  api.nvim_set_hl(0, group, options)
+local highlights = {
+  -- This highlight group can be used when one wants to disable a highlight
+  -- group using `winhl`
+  Disabled = {},
+
+  -- These highlight groups can be used for statuslines, for example when
+  -- displaying ALE warnings and errors.
+  BlackOnLightYellow = { fg = black, bg = lyellow1 },
+  LightRedBackground = { bg = lred },
+  WhiteOnBlue = { fg = white, bg = blue },
+  WhiteOnOrange = { fg = white, bg = orange },
+  WhiteOnRed = { fg = white, bg = red },
+  WhiteOnYellow = { fg = white, bg = yellow },
+  Yellow = { fg = yellow, bold = true },
+
+  Bold = { fg = black, bold = true },
+  Boolean = { link = 'Keyword' },
+  Character = { link = 'String' },
+  ColorColumn = { bg = lgrey4 },
+  Comment = { fg = grey },
+  Conceal = {},
+  Constant = { fg = black },
+  Cursor = { bg = black },
+  CursorLine = { bg = lgrey4 },
+  CursorLineNR = { fg = black, bold = true },
+  Directory = { fg = purple },
+  EndOfBuffer = { fg = background, bg = background },
+  Error = { link = 'ErrorMsg' },
+  ErrorMsg = { fg = red, bold = true },
+  FoldColumn = { fg = lgrey1, bg = background },
+  Folded = { link = 'Comment' },
+  Identifier = { fg = black },
+  IncSearch = { bg = lyellow1 },
+  Include = { fg = black, bold = true },
+  InstanceVariable = { fg = purple },
+  Keyword = { fg = black, bold = true },
+  Label = { link = 'Keyword' },
+  LineNr = { fg = black },
+  Macro = { fg = orange },
+  MatchParen = { bold = true },
+  MoreMsg = { fg = black },
+  NonText = { fg = lgrey3 },
+  Normal = { fg = black, bg = background },
+  NormalFloat = { fg = black, bg = background },
+  Number = { fg = blue },
+  Operator = { fg = black },
+  Pmenu = { fg = black, bg = lgrey2 },
+  PmenuSbar = { bg = lgrey2 },
+  PmenuSel = { fg = black, bg = lgrey1, bold = true },
+  PmenuThumb = { bg = lgrey1 },
+  PreCondit = { link = 'Macro' },
+  PreProc = { fg = black },
+  Question = { fg = black },
+  QuickFixLine = { bg = lgrey2, bold = true },
+  Regexp = { fg = orange },
+  Search = { bg = lyellow1 },
+  SignColumn = { link = 'FoldColumn' },
+  Special = { fg = black },
+  SpecialKey = { link = 'Number' },
+  SpellBad = { fg = red, bold = true, underline = true },
+  SpellCap = { fg = purple, underline = true },
+  SpellLocal = { fg = green, underline = true },
+  SpellRare = { fg = purple, underline = true },
+  Statement = { link = 'Keyword' },
+  StatusLine = { fg = black, bg = lgrey1 },
+  StatusLineNC = { fg = black, bg = lgrey4 },
+  StorageClass = { link = 'Keyword' },
+  String = { fg = green },
+  Symbol = { fg = orange },
+  TabLine = { fg = dgrey, bg = lgrey1 },
+  TabLineFill = { fg = black, bg = lgrey1 },
+  TabLineSel = { fg = black, bg = background, bold = true },
+  Title = { fg = black, bold = true },
+  Todo = { fg = grey, bold = true },
+  Type = { link = 'Constant' },
+  Underlined = { underline = true },
+  VertSplit = { fg = lgrey1 },
+  Visual = { bg = lgrey1 },
+  WarningMsg = { fg = yellow, bold = true },
+  WildMenu = { link = 'PmenuSel' },
+
+  -- ALE
+  ALEError = { fg = red, bold = true },
+  ALEErrorSign = { fg = red, bold = true },
+  ALEWarning = { fg = yellow, bold = true },
+  ALEWarningSign = { fg = yellow, bold = true },
+
+  -- CSS
+  cssClassName = { link = 'Keyword' },
+  cssColor = { link = 'Number' },
+  cssIdentifier = { link = 'Keyword' },
+  cssImportant = { link = 'Keyword' },
+  cssProp = { link = 'Identifier' },
+  cssTagName = { link = 'Keyword' },
+
+  -- Diffs
+  DiffAdd = { bg = lgreen },
+  DiffChange = {},
+  DiffDelete = { fg = red },
+  DiffText = { bg = lyellow2 },
+  diffAdded = { link = 'DiffAdd' },
+  diffChanged = { link = 'DiffChange' },
+  diffFile = { fg = black, bold = true },
+  diffLine = { fg = blue },
+  diffRemoved = { link = 'DiffDelete' },
+
+  -- Dot/Graphviz
+  dotKeyChar = { link = 'Operator' },
+
+  -- diffview.nvim
+  DiffviewCursorLine = { bg = lgrey1 },
+  DiffviewDiffAddAsDelete = { bg = lred },
+  DiffviewDiffDelete = { fg = lgrey1 },
+  DiffviewFilePanelFileName = { fg = black },
+  DiffviewFilePanelPath = { fg = purple },
+
+  -- Fugitive
+  FugitiveblameHash = { fg = purple },
+  FugitiveblameTime = { fg = blue },
+  gitCommitOverflow = { link = 'ErrorMsg' },
+  gitCommitSummary = { link = 'String' },
+
+  -- HAML
+  hamlClass = { fg = black },
+  hamlDocType = { link = 'Comment' },
+  hamlId = { fg = black },
+  hamlTag = { fg = black, bold = true },
+
+  -- hop.nvim
+  HopNextKey = { fg = red, bold = true },
+  HopNextKey1 = { fg = yellow },
+  HopNextKey2 = { fg = yellow },
+  HopUnmatched = {},
+
+  -- HTML
+  htmlArg = { link = 'Identifier' },
+  htmlLink = { link = 'Directory' },
+  htmlScriptTag = { link = 'htmlTag' },
+  htmlSpecialTagName = { link = 'htmlTag' },
+  htmlTag = { fg = black, bold = true },
+  htmlTagName = { link = 'htmlTag' },
+
+  -- Inko
+  inkoCommentBold = { fg = grey, bold = true },
+  inkoCommentInlineUrl = { link = 'Number' },
+  inkoCommentItalic = { fg = grey, italic = true },
+  inkoCommentTitle = { fg = grey, bold = true },
+  inkoInstanceVariable = { link = 'InstanceVariable' },
+  inkoKeywordArgument = { link = 'Regexp' },
+
+  -- Java
+  javaAnnotation = { link = 'Directory' },
+  javaCommentTitle = { link = 'javaComment' },
+  javaDocParam = { link = 'Todo' },
+  javaDocTags = { link = 'Todo' },
+  javaExternal = { link = 'Keyword' },
+  javaStorageClass = { link = 'Keyword' },
+
+  -- Javascript
+  JavaScriptNumber = { link = 'Number' },
+  javaScriptBraces = { link = 'Operator' },
+  javaScriptFunction = { link = 'Keyword' },
+  javaScriptIdentifier = { link = 'Keyword' },
+  javaScriptMember = { link = 'Identifier' },
+
+  -- JSON
+  jsonKeyword = { link = 'String' },
+
+  -- Lua
+  luaFunction = { link = 'Keyword' },
+
+  -- LSP
+  DiagnosticUnderlineError = { underline = true, sp = red },
+  DiagnosticUnderlineWarn = { underline = true, sp = yellow },
+  LspDiagnosticsUnderlineError = { link = 'DiagnosticUnderlineError' },
+  LspDiagnosticsUnderlineWarning = { link = 'DiagnosticUnderlineWarn' },
+
+  -- Floating highlights are a bit too distracting, so they are disabled
+  DiagnosticFloatingError = { fg = black, bg = background },
+  DiagnosticFloatingHint = { fg = black, bg = background },
+  DiagnosticFloatingInfo = { fg = black, bg = background },
+  DiagnosticFloatingWarn = { fg = black, bg = background },
+
+  DiagnosticError = { fg = red, bold = true },
+  DiagnosticHint = { fg = grey, bold = true },
+  DiagnosticInfo = { fg = blue, bold = true },
+  DiagnosticWarn = { fg = yellow, bold = true },
+
+  -- Make
+  makeTarget = { link = 'Function' },
+
+  -- Markdown
+  markdownCode = { link = 'markdownCodeBlock' },
+  markdownCodeBlock = { link = 'Comment' },
+  markdownListMarker = { link = 'Keyword' },
+  markdownOrderedListMarker = { link = 'Keyword' },
+
+  -- netrw
+  netrwClassify = { link = 'Identifier' },
+
+  -- Perl
+  perlPackageDecl = { link = 'Identifier' },
+  perlStatementInclude = { link = 'Statement' },
+  perlStatementPackage = { link = 'Statement' },
+  podCmdText = { link = 'Todo' },
+  podCommand = { link = 'Comment' },
+  podVerbatimLine = { link = 'Todo' },
+
+  -- Ruby
+  rubyAttribute = { link = 'Identifier' },
+  rubyClass = { link = 'Keyword' },
+  rubyClassVariable = { link = 'rubyInstancevariable' },
+  rubyConstant = { link = 'Constant' },
+  rubyDefine = { link = 'Keyword' },
+  rubyFunction = { link = 'Function' },
+  rubyInstanceVariable = { link = 'InstanceVariable' },
+  rubyMacro = { link = 'Identifier' },
+  rubyModule = { link = 'rubyClass' },
+  rubyRegexp = { link = 'Regexp' },
+  rubyRegexpCharClass = { link = 'Regexp' },
+  rubyRegexpDelimiter = { link = 'Regexp' },
+  rubyRegexpQuantifier = { link = 'Regexp' },
+  rubyRegexpSpecial = { link = 'Regexp' },
+  rubyStringDelimiter = { link = 'String' },
+  rubySymbol = { link = 'Symbol' },
+
+  -- Rust
+  rustCommentBlockDoc = { link = 'Comment' },
+  rustCommentLineDoc = { link = 'Comment' },
+  rustFuncCall = { link = 'Identifier' },
+  rustModPath = { link = 'Identifier' },
+
+  -- Python
+  pythonOperator = { link = 'Keyword' },
+
+  -- SASS
+  sassClass = { link = 'cssClassName' },
+  sassId = { link = 'cssIdentifier' },
+
+  -- Shell
+  shFunctionKey = { link = 'Keyword' },
+
+  -- SQL
+  sqlKeyword = { link = 'Keyword' },
+
+  -- Typescript
+  typescriptBraces = { link = 'Operator' },
+  typescriptEndColons = { link = 'Operator' },
+  typescriptExceptions = { link = 'Keyword' },
+  typescriptFuncKeyword = { link = 'Keyword' },
+  typescriptFunction = { link = 'Function' },
+  typescriptIdentifier = { link = 'Identifier' },
+  typescriptLogicSymbols = { link = 'Operator' },
+
+  -- Telescope
+  TelescopeBorder = { fg = lgrey1 },
+  TelescopeMatching = { fg = yellow, bold = true },
+  TelescopePromptPrefix = { fg = black, bold = true },
+  TelescopeSelection = { bg = lgrey1, bold = true },
+
+  -- Treesitter
+  TSEmphasis = { italic = true },
+  TSField = {},
+  TSStringEscape = { fg = green, bold = true },
+  TSStrong = { bold = true },
+  TSURI = { fg = cyan, underline = true },
+  TSUnderline = { underline = true },
+
+  TSConstMacro = { link = 'Macro' },
+  TSDanger = { link = 'Todo' },
+  TSKeywordOperator = { link = 'Keyword' },
+  TSNamespace = { link = 'Constant' },
+  TSNote = { link = 'Todo' },
+  TSProperty = { link = 'TSField' },
+  TSStringRegex = { link = 'Regexp' },
+  TSSymbol = { link = 'Symbol' },
+  TSTypeBuiltin = { link = 'Keyword' },
+  TSWarning = { link = 'Todo' },
+
+  -- Ruby uses "TSLabel" for instance variables, for some reason. See
+  -- https://github.com/tree-sitter/tree-sitter-ruby/issues/184 for more
+  -- details.
+  rubyTSLabel = { link = 'InstanceVariable' },
+
+  -- TOML
+  --
+  -- tomlTSTypeBuiltin is used for section titles (e.g. `[dependencies]`), while
+  -- tomlTSProperty is used for key-value pairs. These rules ensure the syntax
+  -- is consistent with https://github.com/cespare/vim-toml.
+  tomlTSProperty = { fg = black },
+  tomlTSTypeBuiltin = { fg = black, bold = true },
+
+  -- Vimscript
+  VimCommentTitle = { link = 'Todo' },
+  VimIsCommand = { link = 'Constant' },
+  vimGroup = { link = 'Constant' },
+  vimHiGroup = { link = 'Constant' },
+
+  -- XML
+  xmlAttrib = { link = 'Identifier' },
+  xmlTag = { link = 'Identifier' },
+  xmlTagName = { link = 'Identifier' },
+
+  -- YAML
+  yamlPlainScalar = { link = 'String' },
+
+  -- YARD
+  yardComment = { link = 'Comment' },
+  yardType = { link = 'Todo' },
+  yardTypeList = { link = 'Todo' },
+}
+
+for group, opts in pairs(highlights) do
+  api.nvim_set_hl(0, group, opts)
 end
-
-local function link(source, target)
-  api.nvim_set_hl(0, source, { link = target })
-end
-
--- This highlight group can be used when one wants to disable a highlight group
--- using `winhl`
-hi('Disabled', {})
-
--- These highlight groups can be used for statuslines, for example when
--- displaying ALE warnings and errors.
-hi('WhiteOnOrange', { fg = white, bg = orange })
-hi('WhiteOnYellow', { fg = white, bg = yellow })
-hi('WhiteOnRed', { fg = white, bg = red })
-hi('BlackOnLightYellow', { fg = black, bg = lyellow1 })
-hi('Yellow', { fg = yellow, bold = true })
-hi('LightRedBackground', { bg = lred })
-hi('WhiteOnBlue', { fg = white, bg = blue })
-
-hi('Bold', { fg = black, bold = true })
-hi('ColorColumn', { bg = lgrey4 })
-hi('Comment', { fg = grey })
-hi('Conceal', {})
-hi('Constant', { fg = black })
-hi('Cursor', { bg = black })
-hi('Visual', { bg = lgrey1 })
-hi('CursorLine', { bg = lgrey4 })
-hi('CursorLineNR', { fg = black, bold = true })
-hi('Directory', { fg = purple })
-hi('ErrorMsg', { fg = red, bold = true })
-hi('FoldColumn', { fg = lgrey1, bg = background })
-hi('Identifier', { fg = black })
-hi('IncSearch', { bg = lyellow1 })
-hi('Include', { fg = black, bold = true })
-hi('Keyword', { fg = black, bold = true })
-hi('LineNr', { fg = black })
-hi('Macro', { fg = orange })
-hi('MatchParen', { bold = true })
-hi('MoreMsg', { fg = black })
-hi('NonText', { fg = lgrey3 })
-hi('EndOfBuffer', { fg = background, bg = background })
-hi('Normal', { fg = black, bg = background })
-hi('NormalFloat', { fg = black, bg = background })
-hi('Number', { fg = blue })
-hi('Operator', { fg = black })
-hi('Pmenu', { fg = black, bg = lgrey2 })
-hi('PmenuSel', { fg = black, bg = lgrey1, bold = true })
-hi('PmenuThumb', { bg = lgrey1 })
-hi('PmenuSbar', { bg = lgrey2 })
-hi('PreProc', { fg = black })
-hi('Question', { fg = black })
-hi('QuickFixLine', { bg = lgrey2, bold = true })
-hi('Regexp', { fg = orange })
-hi('Symbol', { fg = orange })
-hi('Search', { bg = lyellow1 })
-hi('Special', { fg = black })
-hi('SpellBad', { fg = red, bold = true, underline = true })
-hi('SpellCap', { fg = purple, underline = true })
-hi('SpellLocal', { fg = green, underline = true })
-hi('SpellRare', { fg = purple, underline = true })
-hi('StatusLine', { fg = black, bg = lgrey1 })
-hi('StatusLineNC', { fg = black, bg = lgrey4 })
-hi('String', { fg = green })
-hi('TabLine', { fg = dgrey, bg = lgrey1 })
-hi('TabLineFill', { fg = black, bg = lgrey1 })
-hi('TabLineSel', { fg = black, bg = background, bold = true })
-hi('Title', { fg = black, bold = true })
-hi('Todo', { fg = grey, bold = true })
-hi('Underlined', { underline = true })
-hi('VertSplit', { fg = lgrey1 })
-hi('WarningMsg', { fg = yellow, bold = true })
-hi('InstanceVariable', { fg = purple })
-
-link('Boolean', 'Keyword')
-link('Character', 'String')
-link('Error', 'ErrorMsg')
-link('Folded', 'Comment')
-link('Label', 'Keyword')
-link('PreCondit', 'Macro')
-link('SignColumn', 'FoldColumn')
-link('SpecialKey', 'Number')
-link('Statement', 'Keyword')
-link('StorageClass', 'Keyword')
-link('Type', 'Constant')
-link('WildMenu', 'PmenuSel')
-
--- ALE
-hi('ALEError', { fg = red, bold = true })
-hi('ALEErrorSign', { fg = red, bold = true })
-hi('ALEWarning', { fg = yellow, bold = true })
-hi('ALEWarningSign', { fg = yellow, bold = true })
-
--- CSS
-link('cssClassName', 'Keyword')
-link('cssColor', 'Number')
-link('cssIdentifier', 'Keyword')
-link('cssImportant', 'Keyword')
-link('cssProp', 'Identifier')
-link('cssTagName', 'Keyword')
-
--- Diffs
-hi('DiffAdd', { bg = lgreen })
-hi('DiffChange', {})
-hi('DiffDelete', { fg = red })
-hi('DiffText', { bg = lyellow2 })
-hi('diffFile', { fg = black, bold = true })
-hi('diffLine', { fg = blue })
-link('diffAdded', 'DiffAdd')
-link('diffChanged', 'DiffChange')
-link('diffRemoved', 'DiffDelete')
-link('dotKeyChar', 'Operator')
-
--- diffview.nvim
-hi('DiffviewFilePanelFileName', { fg = black })
-hi('DiffviewFilePanelPath', { fg = purple })
-hi('DiffviewCursorLine', { bg = lgrey1 })
-hi('DiffviewDiffAddAsDelete', { bg = lred })
-hi('DiffviewDiffDelete', { fg = lgrey1 })
-
--- Fugitive
-hi('FugitiveblameTime', { fg = blue })
-hi('FugitiveblameHash', { fg = purple })
-link('gitCommitOverflow', 'ErrorMsg')
-link('gitCommitSummary', 'String')
-
--- HAML
-hi('hamlClass', { fg = black })
-hi('hamlId', { fg = black })
-hi('hamlTag', { fg = black, bold = true })
-link('hamlDocType', 'Comment')
-
--- hop.nvim
-hi('HopNextKey', { fg = red, bold = true })
-hi('HopNextKey1', { fg = yellow })
-hi('HopNextKey2', { fg = yellow })
-hi('HopUnmatched', {})
-
--- HTML
-hi('htmlTag', { fg = black, bold = true })
-link('htmlArg', 'Identifier')
-link('htmlLink', 'Directory')
-link('htmlLink', 'Directory')
-link('htmlScriptTag', 'htmlTag')
-link('htmlSpecialTagName', 'htmlTag')
-link('htmlTagName', 'htmlTag')
-
--- Inko
-hi('inkoCommentBold', { fg = grey, bold = true })
-hi('inkoCommentItalic', { fg = grey, italic = true })
-hi('inkoCommentTitle', { fg = grey, bold = true })
-link('inkoCommentInlineUrl', 'Number')
-link('inkoInstanceVariable', 'InstanceVariable')
-link('inkoKeywordArgument', 'Regexp')
-
--- Java
-link('javaAnnotation', 'Directory')
-link('javaCommentTitle', 'javaComment')
-link('javaDocParam', 'Todo')
-link('javaDocTags', 'Todo')
-link('javaExternal', 'Keyword')
-link('javaStorageClass', 'Keyword')
-
--- Javascript
-link('JavaScriptNumber', 'Number')
-link('javaScriptBraces', 'Operator')
-link('javaScriptFunction', 'Keyword')
-link('javaScriptIdentifier', 'Keyword')
-link('javaScriptMember', 'Identifier')
-
--- JSON
-link('jsonKeyword', 'String')
-
--- Lua
-link('luaFunction', 'Keyword')
-
--- LSP
-hi('DiagnosticUnderlineError', { underline = true, sp = red })
-hi('DiagnosticUnderlineWarn', { underline = true, sp = yellow })
-link('LspDiagnosticsUnderlineError', 'DiagnosticUnderlineError')
-link('LspDiagnosticsUnderlineWarning', 'DiagnosticUnderlineWarn')
-
--- Floating highlights are a bit too distracting, so they are disabled
-hi('DiagnosticFloatingError', { fg = black, bg = background })
-hi('DiagnosticFloatingWarn', { fg = black, bg = background })
-hi('DiagnosticFloatingInfo', { fg = black, bg = background })
-hi('DiagnosticFloatingHint', { fg = black, bg = background })
-
-hi('DiagnosticError', { fg = red, bold = true })
-hi('DiagnosticWarn', { fg = yellow, bold = true })
-hi('DiagnosticInfo', { fg = blue, bold = true })
-hi('DiagnosticHint', { fg = grey, bold = true })
-
--- Make
-link('makeTarget', 'Function')
-
--- Markdown
-link('markdownCode', 'markdownCodeBlock')
-link('markdownCodeBlock', 'Comment')
-link('markdownListMarker', 'Keyword')
-link('markdownOrderedListMarker', 'Keyword')
-
--- netrw
-link('netrwClassify', 'Identifier')
-
--- Perl
-link('perlPackageDecl', 'Identifier')
-link('perlStatementInclude', 'Statement')
-link('perlStatementPackage', 'Statement')
-link('podCmdText', 'Todo')
-link('podCommand', 'Comment')
-link('podVerbatimLine', 'Todo')
-
--- Ruby
-link('rubyAttribute', 'Identifier')
-link('rubyClass', 'Keyword')
-link('rubyClassVariable', 'rubyInstancevariable')
-link('rubyConstant', 'Constant')
-link('rubyDefine', 'Keyword')
-link('rubyFunction', 'Function')
-link('rubyInstanceVariable', 'InstanceVariable')
-link('rubyMacro', 'Identifier')
-link('rubyModule', 'rubyClass')
-link('rubyRegexp', 'Regexp')
-link('rubyRegexpCharClass', 'Regexp')
-link('rubyRegexpDelimiter', 'Regexp')
-link('rubyRegexpQuantifier', 'Regexp')
-link('rubyRegexpSpecial', 'Regexp')
-link('rubyStringDelimiter', 'String')
-link('rubySymbol', 'Symbol')
-
--- Rust
-link('rustCommentBlockDoc', 'Comment')
-link('rustCommentLineDoc', 'Comment')
-link('rustFuncCall', 'Identifier')
-link('rustModPath', 'Identifier')
-
--- Python
-link('pythonOperator', 'Keyword')
-
--- SASS
-link('sassClass', 'cssClassName')
-link('sassId', 'cssIdentifier')
-
--- Shell
-link('shFunctionKey', 'Keyword')
-
--- SQL
-link('sqlKeyword', 'Keyword')
-
--- Typescript
-link('typescriptBraces', 'Operator')
-link('typescriptEndColons', 'Operator')
-link('typescriptExceptions', 'Keyword')
-link('typescriptFuncKeyword', 'Keyword')
-link('typescriptFunction', 'Function')
-link('typescriptIdentifier', 'Identifier')
-link('typescriptLogicSymbols', 'Operator')
-
--- Telescope
-hi('TelescopeSelection', { bg = lgrey1, bold = true })
-hi('TelescopeMatching', { fg = yellow, bold = true })
-hi('TelescopeBorder', { fg = lgrey1 })
-hi('TelescopePromptPrefix', { fg = black, bold = true })
-
--- Treesitter
-hi('TSStringEscape', { fg = green, bold = true })
-hi('TSStrong', { bold = true })
-hi('TSEmphasis', { italic = true })
-hi('TSUnderline', { underline = true })
-hi('TSURI', { fg = cyan, underline = true })
-hi('TSNote', { fg = yellow, bold = true })
-hi('TSField', {})
-
-link('TSSymbol', 'Symbol')
-link('TSStringRegex', 'Regexp')
-link('TSConstMacro', 'Macro')
-link('TSNamespace', 'Constant')
-link('TSWarning', 'Todo')
-link('TSNote', 'Todo')
-link('TSDanger', 'Todo')
-link('TSKeywordOperator', 'Keyword')
-link('TSTypeBuiltin', 'Keyword')
-link('TSProperty', 'TSField')
-
--- Ruby uses "TSLabel" for instance variables, for some reason. See
--- https://github.com/tree-sitter/tree-sitter-ruby/issues/184 for more details.
-link('rubyTSLabel', 'InstanceVariable')
-
--- TOML
---
--- tomlTSTypeBuiltin is used for section titles (e.g. `[dependencies]`), while
--- tomlTSProperty is used for key-value pairs. These rules ensure the syntax is
--- consistent with https://github.com/cespare/vim-toml.
-hi('tomlTSTypeBuiltin', { fg = black, bold = true })
-hi('tomlTSProperty', { fg = black })
-
--- Vimscript
-link('VimCommentTitle', 'Todo')
-link('VimIsCommand', 'Constant')
-link('vimGroup', 'Constant')
-link('vimHiGroup', 'Constant')
-
--- XML
-link('xmlAttrib', 'Identifier')
-link('xmlTag', 'Identifier')
-link('xmlTagName', 'Identifier')
-
--- YAML
-link('yamlPlainScalar', 'String')
-
--- YARD
-link('yardComment', 'Comment')
-link('yardType', 'Todo')
-link('yardTypeList', 'Todo')
