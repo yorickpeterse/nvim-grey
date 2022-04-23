@@ -316,6 +316,7 @@ local highlights = {
   TelescopeMatching = { fg = yellow, bold = true },
   TelescopePromptPrefix = { fg = black, bold = true },
   TelescopeSelection = { bg = lgrey1, bold = true },
+  TelescopeTitle = { fg = grey },
 
   -- Treesitter
   TSEmphasis = { italic = true },
