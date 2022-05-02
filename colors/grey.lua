@@ -164,7 +164,8 @@ local highlights = {
   diffRemoved = { link = 'DiffDelete' },
 
   -- dressing.nvim
-  FloatTitle = { fg = grey },
+  FloatTitle = { fg = black, bold = true },
+  FloatBorder = { fg = grey },
 
   -- Dot/Graphviz
   dotKeyChar = { link = 'Operator' },
@@ -315,11 +316,11 @@ local highlights = {
   typescriptLogicSymbols = { link = 'Operator' },
 
   -- Telescope
-  TelescopeBorder = { fg = lgrey1 },
+  TelescopeBorder = { fg = grey },
   TelescopeMatching = { fg = yellow, bold = true },
   TelescopePromptPrefix = { fg = black, bold = true },
   TelescopeSelection = { bg = lgrey1, bold = true },
-  TelescopeTitle = { fg = grey },
+  TelescopeTitle = { fg = black, bold = true },
 
   -- Treesitter
   TSEmphasis = { italic = true },
