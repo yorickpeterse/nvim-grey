@@ -123,6 +123,13 @@ local highlights = {
   Statement = { link = 'Keyword' },
   StatusLine = { fg = black, bg = lgrey1 },
   StatusLineNC = { fg = black, bg = lgrey4 },
+
+  -- Window bars are introduced in PR
+  -- https://github.com/neovim/neovim/pull/18562. They act a bit like status
+  -- lines, except they're drawn at the top of each window.
+  WinBar = { fg = black },
+  WinBarFill = { fg = lgrey1 },
+
   StorageClass = { link = 'Keyword' },
   String = { fg = green },
   Symbol = { fg = orange },
