@@ -183,6 +183,8 @@ local highlights = {
   DiffviewDiffDelete = { fg = lgrey1 },
   DiffviewFilePanelFileName = { fg = black },
   DiffviewFilePanelPath = { fg = purple },
+  DiffviewFilePanelRootPath = { fg = purple },
+  DiffviewFilePanelTitle = { fg = black, bold = true },
 
   -- Fugitive
   FugitiveblameHash = { fg = purple },
