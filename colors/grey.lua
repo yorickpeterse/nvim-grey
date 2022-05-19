@@ -121,8 +121,9 @@ local highlights = {
   SpellLocal = { fg = green, underline = true },
   SpellRare = { fg = purple, underline = true },
   Statement = { link = 'Keyword' },
-  StatusLine = { fg = black, bg = lgrey1 },
+  StatusLine = { fg = black, bg = lgrey2 },
   StatusLineNC = { fg = black, bg = lgrey4 },
+  StatusLineTab = { fg = black, bg = lgrey1 },
 
   -- Window bars are introduced in PR
   -- https://github.com/neovim/neovim/pull/18562. They act a bit like status
