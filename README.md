@@ -65,6 +65,9 @@ For the text and highlight/selection color:
 * NeoVim 0.7.0 or newer (due to the use of `nvim_set_hl()`)
 * true-color support
 
+For best results use `set laststatus=3` (introduced in NeoVim 0.8), as the theme
+is designed with this setting in mind.
+
 ## Installation
 
 ### Vim Plug
