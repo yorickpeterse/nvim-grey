@@ -111,7 +111,7 @@ local highlights = {
   PreCondit = { link = 'Macro' },
   PreProc = { fg = black },
   Question = { fg = black },
-  QuickFixLine = { bg = lgrey2, bold = true },
+  QuickFixLine = { bg = lgrey4, bold = true },
   Regexp = { fg = orange },
   Search = { bg = lyellow1 },
   SignColumn = { link = 'FoldColumn' },
@@ -180,7 +180,7 @@ local highlights = {
   dotKeyChar = { link = 'Operator' },
 
   -- diffview.nvim
-  DiffviewCursorLine = { bg = lgrey1 },
+  DiffviewCursorLine = { bg = lgrey4 },
   DiffviewDiffAddAsDelete = { bg = lred },
   DiffviewDiffDelete = { fg = lgrey1 },
   DiffviewFilePanelFileName = { fg = black },
