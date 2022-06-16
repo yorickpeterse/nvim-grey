@@ -98,6 +98,7 @@ local highlights = {
   Macro = { fg = orange },
   MatchParen = { bold = true },
   MoreMsg = { fg = black },
+  MsgSeparator = { fg = lgrey1 },
   NonText = { fg = lgrey3 },
   Normal = { fg = black, bg = background },
   NormalFloat = { fg = black, bg = background },
