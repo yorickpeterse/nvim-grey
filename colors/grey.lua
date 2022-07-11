@@ -182,7 +182,7 @@ local highlights = {
   -- diffview.nvim
   DiffviewCursorLine = { bg = lgrey4 },
   DiffviewDiffAddAsDelete = { bg = lred },
-  DiffviewDiffDelete = { fg = lred },
+  DiffviewDiffDelete = { fg = lgrey1 },
   DiffviewFilePanelFileName = { fg = black },
   DiffviewFilePanelPath = { fg = purple },
   DiffviewFilePanelRootPath = { fg = purple },
