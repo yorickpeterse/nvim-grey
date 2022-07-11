@@ -31,6 +31,7 @@ local lgrey1 = '#dddddd'
 local lgrey2 = '#eaeaea'
 local lgrey3 = '#aaaaaa'
 local lgrey4 = '#eeeeee'
+local lgrey5 = '#cccccc'
 local yellow = '#bf8f00'
 local lyellow1 = '#f9e595'
 local lyellow2 = '#f9efc7'
@@ -182,7 +183,7 @@ local highlights = {
   -- diffview.nvim
   DiffviewCursorLine = { bg = lgrey4 },
   DiffviewDiffAddAsDelete = { bg = lred },
-  DiffviewDiffDelete = { fg = lgrey1 },
+  DiffviewDiffDelete = { fg = lgrey5 },
   DiffviewFilePanelFileName = { fg = black },
   DiffviewFilePanelPath = { fg = purple },
   DiffviewFilePanelRootPath = { fg = purple },
