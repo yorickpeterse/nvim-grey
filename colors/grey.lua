@@ -81,7 +81,8 @@ local highlights = {
   Conceal = {},
   Constant = { fg = black },
   Cursor = { bg = black },
-  CursorLine = { bg = lgrey4 },
+  -- This is to work around https://github.com/neovim/neovim/issues/9800.
+  CursorLine = { ctermfg = 'black' },
   CursorLineNR = { fg = black, bold = true },
   Directory = { fg = purple },
   EndOfBuffer = { fg = background, bg = background },
