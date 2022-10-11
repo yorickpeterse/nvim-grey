@@ -306,6 +306,13 @@ local highlights = {
   rustFuncCall = { link = 'Identifier' },
   rustModPath = { link = 'Identifier' },
 
+  -- pounce.nvim
+  PounceAccept = { fg = red, bold = true },
+  PounceAcceptBest = { fg = red, bold = true },
+  PounceMatch = { bg = lyellow1 },
+  PounceUnmatched = {},
+  PounceGap = { link = 'None' },
+
   -- Python
   pythonOperator = { link = 'Keyword' },
 
