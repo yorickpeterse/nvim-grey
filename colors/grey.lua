@@ -128,10 +128,8 @@ local highlights = {
   StatusLineNC = { fg = black, bg = lgrey2 },
   StatusLineTab = { fg = black, bg = background, bold = true },
 
-  -- Window bars are introduced in PR
-  -- https://github.com/neovim/neovim/pull/18562. They act a bit like status
-  -- lines, except they're drawn at the top of each window.
-  WinBar = { fg = black, bold = true },
+  WinBar = { fg = black, bg = lgrey1, bold = true },
+  WinBarNc = { fg = black, bold = true },
   WinBarFill = { fg = lgrey1 },
 
   StorageClass = { link = 'Keyword' },
