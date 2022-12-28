@@ -163,7 +163,7 @@ local highlights = {
 
   -- Diffs
   DiffAdd = { bg = lgreen },
-  DiffChange = {},
+  DiffChange = { bg = lgrey2 },
   DiffDelete = { fg = red },
   DiffText = { bg = lyellow2 },
   diffAdded = { link = 'DiffAdd' },
@@ -180,13 +180,17 @@ local highlights = {
   dotKeyChar = { link = 'Operator' },
 
   -- diffview.nvim
-  DiffviewCursorLine = { bg = lgrey4 },
+  DiffviewCursorLine = {},
   DiffviewDiffAddAsDelete = { bg = lred },
   DiffviewDiffDelete = { fg = lgrey5 },
   DiffviewFilePanelFileName = { fg = black },
   DiffviewFilePanelPath = { fg = purple },
   DiffviewFilePanelRootPath = { fg = purple },
   DiffviewFilePanelTitle = { fg = black, bold = true },
+  DiffviewStatusModified = { fg = yellow, bold = true },
+  DiffviewStatusAdded = { fg = green, bold = true },
+  DiffviewStatusCopied = { fg = green, bold = true },
+  DiffviewStatusDeleted = { fg = red, bold = true },
 
   -- Fugitive
   FugitiveblameHash = { fg = purple },
