@@ -20,11 +20,11 @@ g.colors_name = 'grey'
 
 local background = '#f2f2f2'
 local black = '#000000'
-local blue = '#1e6fcc'
+local blue = '#1561b8'
 local green = '#216609'
 local lgreen = '#dfeacc'
 local lred = '#f2d3cd'
-local red = '#cc3e28'
+local red = '#c4331d'
 local grey = '#777777'
 local dgrey = '#555555'
 local lgrey1 = '#dddddd'
@@ -38,7 +38,7 @@ local lyellow2 = '#f9efc7'
 local orange = '#a55000'
 local purple = '#5c21a5'
 local white = '#ffffff'
-local cyan = '#158c86'
+local cyan = '#007872'
 
 g.terminal_color_0 = black
 g.terminal_color_1 = red
