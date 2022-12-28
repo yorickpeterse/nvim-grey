@@ -37,29 +37,6 @@ when using the common display temperature of 6500K.
 |:------------------------------|:------------------------------|:----------------------------|:----------------------------|:----------------
 | ![Ruby](screenshots/ruby.png) | ![Rust](screenshots/rust.png) | ![Lua](screenshots/lua.png) | ![SQL](screenshots/sql.png) | ![Terminal](screenshots/terminal.png)
 
-## Terminal colors
-
-If you want to use Paper as your terminal theme, you can use the following color
-palette:
-
-| Color   | Normal    | Bright    | GNOME Terminal color index
-|:--------|:----------|:----------|:--------------------------
-| Black   | `#000000` | `#555555` | 0, 8
-| Red     | `#CC3E28` | `#CC3E28` | 1, 9
-| Green   | `#216609` | `#216609` | 2, 10
-| Yellow  | `#BF8F00` | `#BF8F00` | 3, 11
-| Blue    | `#1E6FCC` | `#1E6FCC` | 4, 12
-| Purple  | `#5C21A5` | `#5C21A5` | 5, 13
-| Cyan    | `#158C86` | `#158C86` | 6, 14
-| White   | `#FFFFFF` | `#AAAAAA` | 7, 15
-
-For the text and highlight/selection color:
-
-| Color     | Foreground | Background
-|:----------|:-----------|:------------
-| Text      | `#000000`  | `#F2F2F2`
-| Highlight | `#000000`  | `#DDDDDD`
-
 ## Requirements
 
 * NeoVim 0.7.0 or newer (due to the use of `nvim_set_hl()`)
