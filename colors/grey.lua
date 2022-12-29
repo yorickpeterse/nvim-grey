@@ -19,22 +19,19 @@ o.background = 'light'
 g.colors_name = 'grey'
 
 local background = '#f2f2f2'
+local grey_background = '#eaeaea'
 local black = '#000000'
 local blue = '#1561b8'
 local green = '#1C5708'
-local lgreen = '#dfeacc'
-local lred = '#f2d3cd'
+local light_green = '#dfeacc'
+local light_red = '#f2d3cd'
 local red = '#c4331d'
 local grey = '#777777'
-local dgrey = '#555555'
-local lgrey1 = '#dddddd'
-local lgrey2 = '#eaeaea'
-local lgrey3 = '#aaaaaa'
-local lgrey4 = '#eeeeee'
-local lgrey5 = '#cccccc'
+local light_grey = '#dddddd'
+local highlight = '#eeeeee'
 local yellow = '#bf8f00'
-local lyellow1 = '#f9e595'
-local lyellow2 = '#f9efc7'
+local light_yellow = '#f9e595'
+local bright_yellow = '#f9efc7'
 local orange = '#a55000'
 local purple = '#5c21a5'
 local white = '#ffffff'
@@ -47,16 +44,16 @@ g.terminal_color_3 = yellow
 g.terminal_color_4 = blue
 g.terminal_color_5 = purple
 g.terminal_color_6 = cyan
-g.terminal_color_7 = lgrey3
+g.terminal_color_7 = grey
 
-g.terminal_color_8 = dgrey
+g.terminal_color_8 = black
 g.terminal_color_9 = red
 g.terminal_color_10 = green
 g.terminal_color_11 = yellow
 g.terminal_color_12 = blue
 g.terminal_color_13 = purple
 g.terminal_color_14 = cyan
-g.terminal_color_15 = lgrey3
+g.terminal_color_15 = grey
 
 local highlights = {
   -- This highlight group can be used when one wants to disable a highlight
@@ -65,8 +62,8 @@ local highlights = {
 
   -- These highlight groups can be used for statuslines, for example when
   -- displaying ALE warnings and errors.
-  BlackOnLightYellow = { fg = black, bg = lyellow1 },
-  LightRedBackground = { bg = lred },
+  BlackOnLightYellow = { fg = black, bg = light_yellow },
+  LightRedBackground = { bg = light_red },
   WhiteOnBlue = { fg = white, bg = blue },
   WhiteOnOrange = { fg = white, bg = orange },
   WhiteOnRed = { fg = white, bg = red },
@@ -76,22 +73,22 @@ local highlights = {
   Bold = { fg = black, bold = true },
   Boolean = { link = 'Keyword' },
   Character = { link = 'String' },
-  ColorColumn = { bg = lgrey4 },
+  ColorColumn = { bg = highlight },
   Comment = { fg = grey },
   Conceal = {},
   Constant = { fg = black },
   Cursor = { bg = black },
   -- This is to work around https://github.com/neovim/neovim/issues/9800.
   CursorLine = { ctermfg = 'black' },
-  CursorLineNR = { fg = black, bold = true },
+  CursorLineNr = { fg = black, bold = true },
   Directory = { fg = purple },
   EndOfBuffer = { fg = background, bg = background },
   Error = { link = 'ErrorMsg' },
   ErrorMsg = { fg = red, bold = true },
-  FoldColumn = { fg = lgrey1, bg = background },
+  FoldColumn = { fg = light_grey, bg = background },
   Folded = { link = 'Comment' },
   Identifier = { fg = black },
-  IncSearch = { bg = lyellow1 },
+  IncSearch = { bg = light_yellow },
   Include = { fg = black, bold = true },
   InstanceVariable = { fg = purple },
   Keyword = { fg = black, bold = true },
@@ -100,22 +97,22 @@ local highlights = {
   Macro = { fg = orange },
   MatchParen = { bold = true },
   MoreMsg = { fg = black },
-  MsgSeparator = { fg = lgrey1 },
-  NonText = { fg = lgrey3 },
+  MsgSeparator = { fg = light_grey },
+  NonText = { fg = grey },
   Normal = { fg = black, bg = background },
   NormalFloat = { fg = black, bg = background },
   Number = { fg = blue },
   Operator = { fg = black },
-  Pmenu = { fg = black, bg = lgrey2 },
-  PmenuSbar = { bg = lgrey2 },
-  PmenuSel = { fg = black, bg = lgrey1, bold = true },
-  PmenuThumb = { bg = lgrey1 },
+  Pmenu = { fg = black, bg = grey_background },
+  PmenuSbar = { bg = grey_background },
+  PmenuSel = { fg = black, bg = light_grey, bold = true },
+  PmenuThumb = { bg = light_grey },
   PreCondit = { link = 'Macro' },
   PreProc = { fg = black },
   Question = { fg = black },
-  QuickFixLine = { bg = lgrey4, bold = true },
+  QuickFixLine = { bg = highlight, bold = true },
   Regexp = { fg = orange },
-  Search = { bg = lyellow1 },
+  Search = { bg = light_yellow },
   SignColumn = { link = 'FoldColumn' },
   Special = { fg = black },
   SpecialKey = { link = 'Number' },
@@ -125,25 +122,25 @@ local highlights = {
   SpellRare = { fg = purple, underline = true },
   Statement = { link = 'Keyword' },
   StatusLine = { fg = black, bg = background },
-  StatusLineNC = { fg = black, bg = lgrey2 },
+  StatusLineNC = { fg = black, bg = grey_background },
   StatusLineTab = { fg = black, bg = background, bold = true },
 
-  WinBar = { fg = black, bg = lgrey1, bold = true },
+  WinBar = { fg = black, bg = light_grey, bold = true },
   WinBarNc = { fg = black, bold = true },
-  WinBarFill = { fg = lgrey1 },
+  WinBarFill = { fg = light_grey },
 
   StorageClass = { link = 'Keyword' },
   String = { fg = green },
   Symbol = { fg = orange },
-  TabLine = { fg = dgrey, bg = lgrey1 },
-  TabLineFill = { fg = black, bg = lgrey1 },
+  TabLine = { fg = black, bg = light_grey },
+  TabLineFill = { fg = black, bg = light_grey },
   TabLineSel = { fg = black, bg = background, bold = true },
   Title = { fg = black, bold = true },
   Todo = { fg = grey, bold = true },
   Type = { link = 'Constant' },
   Underlined = { underline = true },
-  VertSplit = { fg = lgrey1 },
-  Visual = { bg = lgrey1 },
+  VertSplit = { fg = light_grey },
+  Visual = { bg = light_grey },
   WarningMsg = { fg = yellow, bold = true },
   WildMenu = { link = 'PmenuSel' },
 
@@ -162,10 +159,10 @@ local highlights = {
   cssTagName = { link = 'Keyword' },
 
   -- Diffs
-  DiffAdd = { bg = lgreen },
-  DiffChange = { bg = lgrey2 },
+  DiffAdd = { bg = light_green },
+  DiffChange = { bg = highlight },
   DiffDelete = { fg = red },
-  DiffText = { bg = lyellow2 },
+  DiffText = { bg = bright_yellow },
   diffAdded = { link = 'DiffAdd' },
   diffChanged = { link = 'DiffChange' },
   diffFile = { fg = black, bold = true },
@@ -181,8 +178,8 @@ local highlights = {
 
   -- diffview.nvim
   DiffviewCursorLine = {},
-  DiffviewDiffAddAsDelete = { bg = lred },
-  DiffviewDiffDelete = { fg = lgrey5 },
+  DiffviewDiffAddAsDelete = { bg = light_red },
+  DiffviewDiffDelete = { fg = light_grey },
   DiffviewFilePanelFileName = { fg = black },
   DiffviewFilePanelPath = { fg = purple },
   DiffviewFilePanelRootPath = { fg = purple },
@@ -217,6 +214,8 @@ local highlights = {
   htmlSpecialTagName = { link = 'htmlTag' },
   htmlTag = { fg = black, bold = true },
   htmlTagName = { link = 'htmlTag' },
+  htmlItalic = { italic = true },
+  htmlBold = { bold = true },
 
   -- Inko
   inkoCommentBold = { fg = grey, bold = true },
@@ -272,6 +271,7 @@ local highlights = {
   markdownCodeBlock = { link = 'Comment' },
   markdownListMarker = { link = 'Keyword' },
   markdownOrderedListMarker = { link = 'Keyword' },
+  markdownUrl = { fg = blue },
 
   -- netrw
   netrwClassify = { link = 'Identifier' },
@@ -311,7 +311,7 @@ local highlights = {
   -- pounce.nvim
   PounceAccept = { fg = red, bold = true },
   PounceAcceptBest = { fg = red, bold = true },
-  PounceMatch = { bg = lyellow1 },
+  PounceMatch = { bg = light_yellow },
   PounceUnmatched = {},
   PounceGap = { link = 'None' },
 
@@ -341,7 +341,7 @@ local highlights = {
   TelescopeBorder = { fg = grey },
   TelescopeMatching = { fg = yellow, bold = true },
   TelescopePromptPrefix = { fg = black, bold = true },
-  TelescopeSelection = { bg = lgrey1, bold = true },
+  TelescopeSelection = { bg = light_grey, bold = true },
   TelescopeTitle = { fg = black, bold = true },
 
   -- Treesitter
