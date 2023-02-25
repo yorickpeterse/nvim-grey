@@ -177,7 +177,7 @@ local highlights = {
   dotKeyChar = { link = 'Operator' },
 
   -- diffview.nvim
-  DiffviewCursorLine = {},
+  DiffviewCursorLine = { bg = highlight },
   DiffviewDiffAddAsDelete = { bg = light_red },
   DiffviewDiffDelete = { fg = light_grey },
   DiffviewFilePanelFileName = { fg = black },
