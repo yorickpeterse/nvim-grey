@@ -59,7 +59,6 @@ local highlights = {
   -- This highlight group can be used when one wants to disable a highlight
   -- group using `winhl`
   Disabled = {},
-
   -- These highlight groups can be used for statuslines, for example when
   -- displaying ALE warnings and errors.
   BlackOnLightYellow = { fg = black, bg = light_yellow },
@@ -69,7 +68,6 @@ local highlights = {
   WhiteOnRed = { fg = white, bg = red },
   WhiteOnYellow = { fg = white, bg = yellow },
   Yellow = { fg = yellow, bold = true },
-
   Bold = { fg = black, bold = true },
   Boolean = { link = 'Keyword' },
   Character = { link = 'String' },
@@ -124,11 +122,9 @@ local highlights = {
   StatusLine = { fg = black, bg = background },
   StatusLineNC = { fg = black, bg = grey_background },
   StatusLineTab = { fg = black, bg = background, bold = true },
-
   WinBar = { fg = black, bg = light_grey, bold = true },
   WinBarNc = { fg = black, bold = true },
   WinBarFill = { fg = light_grey },
-
   StorageClass = { link = 'Keyword' },
   String = { fg = green },
   Symbol = { fg = orange },
@@ -143,13 +139,11 @@ local highlights = {
   Visual = { bg = light_grey },
   WarningMsg = { fg = yellow, bold = true },
   WildMenu = { link = 'PmenuSel' },
-
   -- ALE
   ALEError = { fg = red, bold = true },
   ALEErrorSign = { fg = red, bold = true },
   ALEWarning = { fg = yellow, bold = true },
   ALEWarningSign = { fg = yellow, bold = true },
-
   -- CSS
   cssClassName = { link = 'Keyword' },
   cssColor = { link = 'Number' },
@@ -157,7 +151,6 @@ local highlights = {
   cssImportant = { link = 'Keyword' },
   cssProp = { link = 'Identifier' },
   cssTagName = { link = 'Keyword' },
-
   -- Diffs
   DiffAdd = { bg = light_green },
   DiffChange = { bg = highlight },
@@ -168,14 +161,11 @@ local highlights = {
   diffFile = { fg = black, bold = true },
   diffLine = { fg = blue },
   diffRemoved = { link = 'DiffDelete' },
-
   -- dressing.nvim
   FloatTitle = { fg = black, bold = true },
   FloatBorder = { fg = grey },
-
   -- Dot/Graphviz
   dotKeyChar = { link = 'Operator' },
-
   -- diffview.nvim
   DiffviewCursorLine = { bg = highlight },
   DiffviewDiffAddAsDelete = { bg = light_red },
@@ -188,25 +178,21 @@ local highlights = {
   DiffviewStatusAdded = { fg = green, bold = true },
   DiffviewStatusCopied = { fg = green, bold = true },
   DiffviewStatusDeleted = { fg = red, bold = true },
-
   -- Fugitive
   FugitiveblameHash = { fg = purple },
   FugitiveblameTime = { fg = blue },
   gitCommitOverflow = { link = 'ErrorMsg' },
   gitCommitSummary = { link = 'String' },
-
   -- HAML
   hamlClass = { fg = black },
   hamlDocType = { link = 'Comment' },
   hamlId = { fg = black },
   hamlTag = { fg = black, bold = true },
-
   -- hop.nvim
   HopNextKey = { fg = red, bold = true },
   HopNextKey1 = { fg = yellow },
   HopNextKey2 = { fg = yellow },
   HopUnmatched = {},
-
   -- HTML
   htmlArg = { link = 'Identifier' },
   htmlLink = { link = 'Directory' },
@@ -216,7 +202,6 @@ local highlights = {
   htmlTagName = { link = 'htmlTag' },
   htmlItalic = { italic = true },
   htmlBold = { bold = true },
-
   -- Inko
   inkoCommentBold = { fg = grey, bold = true },
   inkoCommentInlineUrl = { link = 'Number' },
@@ -224,7 +209,6 @@ local highlights = {
   inkoCommentTitle = { fg = grey, bold = true },
   inkoInstanceVariable = { link = 'InstanceVariable' },
   inkoKeywordArgument = { link = 'Regexp' },
-
   -- Java
   javaAnnotation = { link = 'Directory' },
   javaCommentTitle = { link = 'javaComment' },
@@ -232,50 +216,40 @@ local highlights = {
   javaDocTags = { link = 'Todo' },
   javaExternal = { link = 'Keyword' },
   javaStorageClass = { link = 'Keyword' },
-
   -- Javascript
   JavaScriptNumber = { link = 'Number' },
   javaScriptBraces = { link = 'Operator' },
   javaScriptFunction = { link = 'Keyword' },
   javaScriptIdentifier = { link = 'Keyword' },
   javaScriptMember = { link = 'Identifier' },
-
   -- JSON
   jsonKeyword = { link = 'String' },
-
   -- Lua
   luaFunction = { link = 'Keyword' },
-
   -- LSP
   DiagnosticUnderlineError = { underline = true, sp = red },
   DiagnosticUnderlineWarn = { underline = true, sp = yellow },
   LspDiagnosticsUnderlineError = { link = 'DiagnosticUnderlineError' },
   LspDiagnosticsUnderlineWarning = { link = 'DiagnosticUnderlineWarn' },
-
   -- Floating highlights are a bit too distracting, so they are disabled
   DiagnosticFloatingError = { fg = black, bg = background },
   DiagnosticFloatingHint = { fg = black, bg = background },
   DiagnosticFloatingInfo = { fg = black, bg = background },
   DiagnosticFloatingWarn = { fg = black, bg = background },
-
   DiagnosticError = { fg = red, bold = true },
   DiagnosticHint = { fg = grey, bold = true },
   DiagnosticInfo = { fg = blue, bold = true },
   DiagnosticWarn = { fg = yellow, bold = true },
-
   -- Make
   makeTarget = { link = 'Function' },
-
   -- Markdown
   markdownCode = { link = 'markdownCodeBlock' },
   markdownCodeBlock = { link = 'Comment' },
   markdownListMarker = { link = 'Keyword' },
   markdownOrderedListMarker = { link = 'Keyword' },
   markdownUrl = { fg = blue },
-
   -- netrw
   netrwClassify = { link = 'Identifier' },
-
   -- Perl
   perlPackageDecl = { link = 'Identifier' },
   perlStatementInclude = { link = 'Statement' },
@@ -283,7 +257,6 @@ local highlights = {
   podCmdText = { link = 'Todo' },
   podCommand = { link = 'Comment' },
   podVerbatimLine = { link = 'Todo' },
-
   -- Ruby
   rubyAttribute = { link = 'Identifier' },
   rubyClass = { link = 'Keyword' },
@@ -301,33 +274,26 @@ local highlights = {
   rubyRegexpSpecial = { link = 'Regexp' },
   rubyStringDelimiter = { link = 'String' },
   rubySymbol = { link = 'Symbol' },
-
   -- Rust
   rustCommentBlockDoc = { link = 'Comment' },
   rustCommentLineDoc = { link = 'Comment' },
   rustFuncCall = { link = 'Identifier' },
   rustModPath = { link = 'Identifier' },
-
   -- pounce.nvim
   PounceAccept = { fg = red, bold = true },
   PounceAcceptBest = { fg = red, bold = true },
   PounceMatch = { bg = light_yellow },
   PounceUnmatched = {},
   PounceGap = { link = 'None' },
-
   -- Python
   pythonOperator = { link = 'Keyword' },
-
   -- SASS
   sassClass = { link = 'cssClassName' },
   sassId = { link = 'cssIdentifier' },
-
   -- Shell
   shFunctionKey = { link = 'Keyword' },
-
   -- SQL
   sqlKeyword = { link = 'Keyword' },
-
   -- Typescript
   typescriptBraces = { link = 'Operator' },
   typescriptEndColons = { link = 'Operator' },
@@ -336,14 +302,12 @@ local highlights = {
   typescriptFunction = { link = 'Function' },
   typescriptIdentifier = { link = 'Identifier' },
   typescriptLogicSymbols = { link = 'Operator' },
-
   -- Telescope
   TelescopeBorder = { fg = grey },
   TelescopeMatching = { fg = yellow, bold = true },
   TelescopePromptPrefix = { fg = black, bold = true },
   TelescopeSelection = { bg = light_grey, bold = true },
   TelescopeTitle = { fg = black, bold = true },
-
   -- Treesitter
   TSEmphasis = { italic = true },
   TSField = {},
@@ -351,7 +315,6 @@ local highlights = {
   TSStrong = { bold = true },
   TSURI = { fg = cyan, underline = true },
   TSUnderline = { underline = true },
-
   TSConstMacro = { link = 'Macro' },
   TSDanger = { link = 'Todo' },
   TSKeywordOperator = { link = 'Keyword' },
@@ -362,12 +325,10 @@ local highlights = {
   TSSymbol = { link = 'Symbol' },
   TSTypeBuiltin = { link = 'Keyword' },
   TSWarning = { link = 'Todo' },
-
   -- Ruby uses "TSLabel" for instance variables, for some reason. See
   -- https://github.com/tree-sitter/tree-sitter-ruby/issues/184 for more
   -- details.
   rubyTSLabel = { link = 'InstanceVariable' },
-
   -- TOML
   --
   -- tomlTSTypeBuiltin is used for section titles (e.g. `[dependencies]`), while
@@ -375,21 +336,17 @@ local highlights = {
   -- is consistent with https://github.com/cespare/vim-toml.
   tomlTSProperty = { fg = black },
   tomlTSTypeBuiltin = { fg = black, bold = true },
-
   -- Vimscript
   VimCommentTitle = { link = 'Todo' },
   VimIsCommand = { link = 'Constant' },
   vimGroup = { link = 'Constant' },
   vimHiGroup = { link = 'Constant' },
-
   -- XML
   xmlAttrib = { link = 'Identifier' },
   xmlTag = { link = 'Identifier' },
   xmlTagName = { link = 'Identifier' },
-
   -- YAML
   yamlPlainScalar = { link = 'String' },
-
   -- YARD
   yardComment = { link = 'Comment' },
   yardType = { link = 'Todo' },

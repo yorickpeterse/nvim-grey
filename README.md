@@ -1,13 +1,13 @@
 # Grey
 
 A low-contrast theme for NeoVim, based on
-[vim-paper](https://gitlab.com/yorickpeterse/vim-paper) and written in Lua
+[vim-paper](https://github.com/yorickpeterse/vim-paper) and written in Lua
 (using `nvim_set_hl()`). Paper was the first light theme I used/created after
 years of using dark themes. The rationale for that was as follows:
 
 > I created Paper as a replacement for [Happy
-> Hacking](https://gitlab.com/yorickpeterse/happy_hacking.vim), and the
-> [Autumn](https://gitlab.com/yorickpeterse/Autumn.vim) theme it was originally
+> Hacking](https://github.com/yorickpeterse/happy_hacking.vim), and the
+> [Autumn](https://github.com/yorickpeterse/Autumn.vim) theme it was originally
 > based on. I've been using dark themes for the last decade or so, and mostly
 > without issues. But dark themes are not necessarily a good choice for your eyes,
 > and research has shown that it's generally better to have dark text on a light
@@ -49,7 +49,7 @@ is designed with this setting in mind.
 
 ### Vim Plug
 
-    Plug 'https://gitlab.com/yorickpeterse/nvim-grey.git'
+    Plug 'yorickpeterse/nvim-grey'
 
 ## License
 
