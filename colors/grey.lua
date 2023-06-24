@@ -178,6 +178,9 @@ local highlights = {
   DiffviewStatusAdded = { fg = green, bold = true },
   DiffviewStatusCopied = { fg = green, bold = true },
   DiffviewStatusDeleted = { fg = red, bold = true },
+  -- Flash
+  FlashBackdrop = { link = 'None' },
+  FlashLabel = { fg = red, bold = true },
   -- Fugitive
   FugitiveblameHash = { fg = purple },
   FugitiveblameTime = { fg = blue },
