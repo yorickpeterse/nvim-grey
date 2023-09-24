@@ -28,6 +28,7 @@ local light_red = '#f2d3cd'
 local red = '#c4331d'
 local grey = '#6e6e6e'
 local light_grey = '#dddddd'
+local border = '#cccccc'
 local highlight = '#eeeeee'
 local yellow = '#bf8f00'
 local light_yellow = '#f9e595'
@@ -95,7 +96,7 @@ local highlights = {
   Macro = { fg = orange },
   MatchParen = { bold = true },
   MoreMsg = { fg = black },
-  MsgSeparator = { fg = light_grey },
+  MsgSeparator = { fg = border },
   NonText = { fg = grey },
   Normal = { fg = black, bg = background },
   NormalFloat = { fg = black, bg = background },
@@ -124,18 +125,18 @@ local highlights = {
   StatusLineTab = { fg = black, bg = background, bold = true },
   WinBar = { fg = black, bg = light_grey, bold = true },
   WinBarNc = { fg = black, bold = true },
-  WinBarFill = { fg = light_grey },
+  WinBarFill = { fg = border },
   StorageClass = { link = 'Keyword' },
   String = { fg = green },
   Symbol = { fg = orange },
   TabLine = { fg = black, bg = light_grey },
-  TabLineFill = { fg = black, bg = light_grey },
+  TabLineFill = { fg = black, bg = border },
   TabLineSel = { fg = black, bg = background, bold = true },
   Title = { fg = black, bold = true },
   Todo = { fg = grey, bold = true },
   Type = { link = 'Constant' },
   Underlined = { underline = true },
-  VertSplit = { fg = light_grey },
+  VertSplit = { fg = border },
   Visual = { bg = light_grey },
   WarningMsg = { fg = yellow, bold = true },
   WildMenu = { link = 'PmenuSel' },
@@ -163,7 +164,7 @@ local highlights = {
   diffRemoved = { link = 'DiffDelete' },
   -- dressing.nvim
   FloatTitle = { fg = black, bold = true },
-  FloatBorder = { fg = grey },
+  FloatBorder = { fg = border },
   -- Dot/Graphviz
   dotKeyChar = { link = 'Operator' },
   -- diffview.nvim
@@ -306,7 +307,7 @@ local highlights = {
   typescriptIdentifier = { link = 'Identifier' },
   typescriptLogicSymbols = { link = 'Operator' },
   -- Telescope
-  TelescopeBorder = { fg = grey },
+  TelescopeBorder = { fg = border },
   TelescopeMatching = { fg = yellow, bold = true },
   TelescopePromptPrefix = { fg = black, bold = true },
   TelescopeSelection = { bg = light_grey, bold = true },
