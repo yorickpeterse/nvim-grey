@@ -99,7 +99,7 @@ local highlights = {
   MsgSeparator = { fg = border },
   NonText = { fg = grey },
   Normal = { fg = black, bg = background },
-  NormalFloat = { fg = black, bg = background },
+  NormalFloat = { fg = black, bg = grey_background },
   Number = { fg = blue },
   Operator = { fg = black },
   Pmenu = { fg = black, bg = grey_background },
@@ -164,7 +164,7 @@ local highlights = {
   diffRemoved = { link = 'DiffDelete' },
   -- dressing.nvim
   FloatTitle = { fg = black, bold = true },
-  FloatBorder = { fg = border },
+  FloatBorder = { fg = grey_background, bg = grey_background },
   -- Dot/Graphviz
   dotKeyChar = { link = 'Operator' },
   -- diffview.nvim
