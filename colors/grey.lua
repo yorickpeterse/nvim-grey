@@ -19,7 +19,7 @@ o.background = 'light'
 g.colors_name = 'grey'
 
 local background = '#f2f2f2'
-local grey_background = '#eaeaea'
+local grey_background = '#ececec'
 local black = '#000000'
 local blue = '#1561b8'
 local green = '#1C5708'
@@ -307,11 +307,12 @@ local highlights = {
   typescriptIdentifier = { link = 'Identifier' },
   typescriptLogicSymbols = { link = 'Operator' },
   -- Telescope
-  TelescopeBorder = { fg = border },
+  TelescopeBorder = { fg = border, bg = grey_background },
   TelescopeMatching = { fg = yellow, bold = true },
   TelescopePromptPrefix = { fg = black, bold = true },
   TelescopeSelection = { bg = light_grey, bold = true },
   TelescopeTitle = { fg = black, bold = true },
+  TelescopeNormal = { fg = black, bg = grey_background },
   -- Treesitter
   TSEmphasis = { italic = true },
   TSField = {},
