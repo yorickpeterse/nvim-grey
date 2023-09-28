@@ -31,13 +31,21 @@ temperature of <5500K. During the day I use a color temperature of 5200K, while
 at night the temperature is set to 3800K. This theme probably won't look so good
 when using the common display temperature of 6500K.
 
-## Screenshots
+# Screenshots
 
-| Ruby                          | Rust                          | Lua                         | SQL                         | NeoVim Terminal
-|:------------------------------|:------------------------------|:----------------------------|:----------------------------|:----------------
-| ![Ruby](screenshots/ruby.png) | ![Rust](screenshots/rust.png) | ![Lua](screenshots/lua.png) | ![SQL](screenshots/sql.png) | ![Terminal](screenshots/terminal.png)
+Rust:
 
-## Requirements
+![Rust](https://github.com/yorickpeterse/nvim-grey/assets/86065/be0f95a6-9314-4c91-872f-169c0e0e3321)
+
+NeoVim's terminal emulator:
+
+![Terminal](https://github.com/yorickpeterse/nvim-grey/assets/86065/7dec3488-72b8-47db-a483-06ec5632b75b)
+
+Telescope (using the provided extension):
+
+![Telescope](https://github.com/yorickpeterse/nvim-grey/assets/86065/bdd20076-f1a8-46f0-95b5-6c0d67d14bc0)
+
+# Requirements
 
 * NeoVim 0.7.0 or newer (due to the use of `nvim_set_hl()`)
 * true-color support
@@ -45,13 +53,30 @@ when using the common display temperature of 6500K.
 For best results use `set laststatus=3` (introduced in NeoVim 0.8), as the theme
 is designed with this setting in mind.
 
-## Installation
+# Installation
 
-### Vim Plug
+## Vim Plug
 
     Plug 'yorickpeterse/nvim-grey'
 
-## License
+# Telescope extension
+
+An extension for Telescope is included, providing a layout strategy called
+"grey". It's recommended that Telescope users use this layout, as the theme
+applies highlights with this layout in mind. To enable, configure Telescope like
+so:
+
+```lua
+require('telescope').setup({
+  defaults = {
+    layout_strategy = 'grey',
+  }
+})
+
+telescope.load_extension('grey')
+```
+
+# License
 
 All source code in this repository is licensed under the Mozilla Public License
 version 2.0, unless stated otherwise. A copy of this license can be found in the
