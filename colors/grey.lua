@@ -163,7 +163,7 @@ local highlights = {
   diffLine = { fg = blue },
   diffRemoved = { link = 'DiffDelete' },
   -- dressing.nvim
-  FloatTitle = { fg = black, bold = true },
+  FloatTitle = { fg = black, bg = grey_background, bold = true },
   FloatBorder = { fg = grey_background, bg = grey_background },
   -- Dot/Graphviz
   dotKeyChar = { link = 'Operator' },
