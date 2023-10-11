@@ -312,8 +312,9 @@ local highlights = {
   TelescopePromptNormal = { fg = black, bg = grey_bg_dark },
   TelescopePromptBorder = { fg = border, bg = grey_bg_dark },
   TelescopePromptPrefix = { fg = black, bold = true },
+  TelescopePromptTitle = { fg = black, bg = grey_bg_dark, bold = true },
   TelescopeSelection = { bg = light_grey, bold = true },
-  TelescopeTitle = { fg = black, bold = true },
+  TelescopeTitle = { fg = black, bg = grey_bg_light, bold = true },
   TelescopeNormal = { fg = black, bg = grey_bg_light },
   -- Treesitter
   TSEmphasis = { italic = true },
