@@ -19,7 +19,8 @@ o.background = 'light'
 g.colors_name = 'grey'
 
 local background = '#f2f2f2'
-local grey_background = '#ececec'
+local grey_bg_light = '#ececec'
+local grey_bg_dark = '#e8e8e8'
 local black = '#000000'
 local blue = '#1561b8'
 local green = '#1C5708'
@@ -27,7 +28,7 @@ local light_green = '#dfeacc'
 local light_red = '#f2d3cd'
 local red = '#c4331d'
 local grey = '#6e6e6e'
-local light_grey = '#dddddd'
+local light_grey = '#e1e1e1'
 local border = '#cccccc'
 local highlight = '#eeeeee'
 local yellow = '#bf8f00'
@@ -99,11 +100,11 @@ local highlights = {
   MsgSeparator = { fg = border },
   NonText = { fg = grey },
   Normal = { fg = black, bg = background },
-  NormalFloat = { fg = black, bg = grey_background },
+  NormalFloat = { fg = black, bg = grey_bg_light },
   Number = { fg = blue },
   Operator = { fg = black },
-  Pmenu = { fg = black, bg = grey_background },
-  PmenuSbar = { bg = grey_background },
+  Pmenu = { fg = black, bg = grey_bg_light },
+  PmenuSbar = { bg = grey_bg_light },
   PmenuSel = { fg = black, bg = light_grey, bold = true },
   PmenuThumb = { bg = light_grey },
   PreCondit = { link = 'Macro' },
@@ -121,7 +122,7 @@ local highlights = {
   SpellRare = { fg = purple, underline = true },
   Statement = { link = 'Keyword' },
   StatusLine = { fg = black, bg = background },
-  StatusLineNC = { fg = black, bg = grey_background },
+  StatusLineNC = { fg = black, bg = grey_bg_light },
   StatusLineTab = { fg = black, bg = background, bold = true },
   WinBar = { fg = black, bg = light_grey, bold = true },
   WinBarNc = { fg = black, bold = true },
@@ -163,8 +164,8 @@ local highlights = {
   diffLine = { fg = blue },
   diffRemoved = { link = 'DiffDelete' },
   -- dressing.nvim
-  FloatTitle = { fg = black, bg = grey_background, bold = true },
-  FloatBorder = { fg = grey_background, bg = grey_background },
+  FloatTitle = { fg = black, bg = grey_bg_light, bold = true },
+  FloatBorder = { fg = grey_bg_light, bg = grey_bg_light },
   -- Dot/Graphviz
   dotKeyChar = { link = 'Operator' },
   -- diffview.nvim
@@ -235,10 +236,10 @@ local highlights = {
   DiagnosticUnderlineWarn = { underline = true, sp = yellow },
   LspDiagnosticsUnderlineError = { link = 'DiagnosticUnderlineError' },
   LspDiagnosticsUnderlineWarning = { link = 'DiagnosticUnderlineWarn' },
-  DiagnosticFloatingError = { fg = red, bg = grey_background, bold = true },
-  DiagnosticFloatingHint = { fg = black, bg = grey_background, bold = true },
-  DiagnosticFloatingInfo = { fg = blue, bg = grey_background, bold = true },
-  DiagnosticFloatingWarn = { fg = yellow, bg = grey_background, bold = true },
+  DiagnosticFloatingError = { fg = red, bg = grey_bg_light, bold = true },
+  DiagnosticFloatingHint = { fg = black, bg = grey_bg_light, bold = true },
+  DiagnosticFloatingInfo = { fg = blue, bg = grey_bg_light, bold = true },
+  DiagnosticFloatingWarn = { fg = yellow, bg = grey_bg_light, bold = true },
   DiagnosticError = { fg = red, bold = true },
   DiagnosticHint = { fg = grey, bold = true },
   DiagnosticInfo = { fg = blue, bold = true },
@@ -306,12 +307,14 @@ local highlights = {
   typescriptIdentifier = { link = 'Identifier' },
   typescriptLogicSymbols = { link = 'Operator' },
   -- Telescope
-  TelescopeBorder = { fg = border, bg = grey_background },
+  TelescopeBorder = { fg = border, bg = grey_bg_light },
   TelescopeMatching = { fg = yellow, bold = true },
+  TelescopePromptNormal = { fg = black, bg = grey_bg_dark },
+  TelescopePromptBorder = { fg = border, bg = grey_bg_dark },
   TelescopePromptPrefix = { fg = black, bold = true },
   TelescopeSelection = { bg = light_grey, bold = true },
   TelescopeTitle = { fg = black, bold = true },
-  TelescopeNormal = { fg = black, bg = grey_background },
+  TelescopeNormal = { fg = black, bg = grey_bg_light },
   -- Treesitter
   TSEmphasis = { italic = true },
   TSField = {},
