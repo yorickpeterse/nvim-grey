@@ -172,6 +172,7 @@ local highlights = {
   DiffviewCursorLine = { bg = highlight },
   DiffviewDiffAddAsDelete = { bg = light_red },
   DiffviewDiffDelete = { fg = light_grey },
+  DiffviewDiffDeleteDim = { fg = light_grey },
   DiffviewFilePanelFileName = { fg = black },
   DiffviewFilePanelPath = { fg = purple },
   DiffviewFilePanelRootPath = { fg = purple },
