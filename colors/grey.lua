@@ -2,7 +2,7 @@
 -- Description:  A low-contrast light theme for NeoVim
 -- Author:       Yorick Peterse <yorick@yorickpeterse.com>
 -- Maintainer:   Yorick Peterse <yorick@yorickpeterse.com>
--- Website:      https://gitlab.com/yorickpeterse/nvim-grey
+-- Website:      https://github.com/yorickpeterse/nvim-grey
 -- License:      MPL 2.0
 
 local o = vim.o
