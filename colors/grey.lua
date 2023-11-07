@@ -124,7 +124,7 @@ local highlights = {
   StatusLine = { fg = black, bg = background },
   StatusLineNC = { fg = black, bg = grey_bg_light },
   StatusLineTab = { fg = black, bg = background, bold = true },
-  WinBar = { fg = black, bg = light_grey, bold = true },
+  WinBar = { fg = black, bold = true },
   WinBarNc = { fg = black, bold = true },
   WinBarFill = { fg = border },
   StorageClass = { link = 'Keyword' },
