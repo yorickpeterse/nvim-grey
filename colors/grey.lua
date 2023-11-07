@@ -97,6 +97,7 @@ local highlights = {
   Macro = { fg = orange },
   MatchParen = { bold = true },
   MoreMsg = { fg = black },
+  ModeMsg = { fg = black, bold = true },
   MsgSeparator = { fg = border },
   NonText = { fg = grey },
   Normal = { fg = black, bg = background },
