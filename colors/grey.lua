@@ -141,6 +141,7 @@ local highlights = {
   VertSplit = { fg = border },
   Visual = { bg = light_grey },
   WarningMsg = { fg = yellow, bold = true },
+  Whitespace = { fg = border },
   WildMenu = { link = 'PmenuSel' },
   -- ALE
   ALEError = { fg = red, bold = true },
