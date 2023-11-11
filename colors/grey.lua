@@ -191,6 +191,12 @@ local highlights = {
   FugitiveblameTime = { fg = blue },
   gitCommitOverflow = { link = 'ErrorMsg' },
   gitCommitSummary = { link = 'String' },
+
+  -- Gitsigns
+  GitSignsAdd = { fg = green },
+  GitSignsDelete = { fg = red },
+  GitSignsChange = { fg = grey },
+
   -- HAML
   hamlClass = { fg = black },
   hamlDocType = { link = 'Comment' },
