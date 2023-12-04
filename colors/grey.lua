@@ -106,7 +106,7 @@ local highlights = {
   Operator = { fg = black },
   Pmenu = { fg = black, bg = grey_bg_light },
   PmenuSbar = { bg = grey_bg_light },
-  PmenuSel = { fg = black, bg = light_grey, bold = true },
+  PmenuSel = { bg = light_grey, bold = true },
   PmenuThumb = { bg = light_grey },
   PreCondit = { link = 'Macro' },
   PreProc = { fg = black },
