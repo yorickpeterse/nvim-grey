@@ -20,7 +20,6 @@ g.colors_name = 'grey'
 
 local background = '#f2f2f2'
 local grey_bg_light = '#ececec'
-local grey_bg_dark = '#e8e8e8'
 local black = '#000000'
 local blue = '#1561b8'
 local green = '#1C5708'
@@ -350,10 +349,9 @@ local highlights = {
   -- Telescope
   TelescopeBorder = { fg = border, bg = grey_bg_light },
   TelescopeMatching = { fg = yellow, bold = true },
-  TelescopePromptNormal = { fg = black, bg = grey_bg_dark },
-  TelescopePromptBorder = { fg = border, bg = grey_bg_dark },
+  TelescopePromptNormal = { fg = black, bg = grey_bg_light },
+  TelescopePromptBorder = { fg = border, bg = grey_bg_light },
   TelescopePromptPrefix = { fg = black, bold = true },
-  TelescopePromptTitle = { fg = black, bg = grey_bg_dark, bold = true },
   TelescopeSelection = { bg = light_grey, bold = true },
   TelescopeTitle = { fg = black, bg = grey_bg_light, bold = true },
   TelescopeNormal = { fg = black, bg = grey_bg_light },

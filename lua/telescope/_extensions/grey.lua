@@ -17,6 +17,7 @@ return require('telescope').register_extension({
 
       layout.prompt.borderchars = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' }
       layout.results.borderchars = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' }
+      layout.results.line = layout.results.line - 1
 
       if layout.preview then
         layout.prompt.width = layout.prompt.width + layout.preview.width + 2
