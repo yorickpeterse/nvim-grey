@@ -87,6 +87,7 @@ local highlights = {
   FoldColumn = { fg = light_grey, bg = background },
   Folded = { link = 'Comment' },
   Identifier = { fg = black },
+  Function = { fg = black },
   IncSearch = { bg = light_yellow },
   Include = { fg = black, bold = true },
   InstanceVariable = { fg = purple },
