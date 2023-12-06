@@ -139,6 +139,7 @@ local highlights = {
   Type = { link = 'Constant' },
   Underlined = { underline = true },
   VertSplit = { fg = border },
+  WinSeparator = { fg = border },
   Visual = { bg = light_grey },
   WarningMsg = { fg = yellow, bold = true },
   Whitespace = { fg = border },
