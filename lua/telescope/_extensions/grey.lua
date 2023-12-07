@@ -30,5 +30,23 @@ return require('telescope').register_extension({
 
       return layout
     end
+
+    strats.grey_cursor = function(self, max_columns, max_lines, layout_config)
+      local layout = strats.cursor(self, max_columns, max_lines, layout_config)
+
+      layout.prompt.borderchars = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' }
+      layout.results.borderchars = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' }
+
+      if layout.preview then
+        layout.prompt.width = layout.prompt.width + layout.preview.width + 2
+        layout.preview.line = layout.results.line
+        layout.preview.height = layout.results.height
+        layout.preview.width = layout.preview.width
+        layout.preview.col = layout.preview.col
+        layout.preview.borderchars = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' }
+      end
+
+      return layout
+    end
   end,
 })
