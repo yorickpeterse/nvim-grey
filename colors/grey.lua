@@ -130,6 +130,7 @@ local highlights = {
   WinBarFill = { fg = border },
   StorageClass = { link = 'Keyword' },
   String = { fg = green },
+  SnippetTabstop = { bg = highlight },
   Symbol = { fg = orange },
   TabLine = { fg = black, bg = light_grey },
   TabLineFill = { fg = black, bg = border },
