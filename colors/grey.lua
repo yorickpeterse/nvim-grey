@@ -339,6 +339,8 @@ local highlights = {
   sassId = { link = 'cssIdentifier' },
   -- Shell
   shFunctionKey = { link = 'Keyword' },
+  -- Snippy
+  SnippyPlaceholder = { link = 'SnippetTabstop' },
   -- SQL
   sqlKeyword = { link = 'Keyword' },
   -- Typescript
