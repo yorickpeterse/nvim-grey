@@ -365,7 +365,7 @@ local highlights = {
   TSField = {},
   TSStringEscape = { fg = green, bold = true },
   TSStrong = { bold = true },
-  TSURI = { fg = cyan, underline = true },
+  TSURI = { fg = blue, underline = true },
   TSUnderline = { underline = true },
   TSConstMacro = { link = 'Macro' },
   TSDanger = { link = 'Todo' },
