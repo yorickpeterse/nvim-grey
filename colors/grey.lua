@@ -89,6 +89,7 @@ local highlights = {
   Identifier = { fg = black },
   Function = { fg = black },
   IncSearch = { bg = light_yellow },
+  CurSearch = { link = 'IncSearch' },
   Include = { fg = black, bold = true },
   InstanceVariable = { fg = purple },
   Keyword = { fg = black, bold = true },
