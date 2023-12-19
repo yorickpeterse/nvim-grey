@@ -182,6 +182,8 @@ local highlights = {
   DiffviewFilePanelPath = { fg = purple },
   DiffviewFilePanelRootPath = { fg = purple },
   DiffviewFilePanelTitle = { fg = black, bold = true },
+  DiffviewFilePanelInsertions = { fg = green },
+  DiffviewFilePanelDeletions = { fg = red },
   DiffviewStatusModified = { fg = yellow, bold = true },
   DiffviewStatusAdded = { fg = green, bold = true },
   DiffviewStatusCopied = { fg = green, bold = true },
