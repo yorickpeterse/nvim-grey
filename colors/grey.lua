@@ -382,6 +382,8 @@ local highlights = {
   TSWarning = { link = 'Todo' },
   ['@text.uri'] = { fg = blue },
   ['@text.reference'] = { fg = purple },
+  ['@text.strong'] = { bold = true },
+  ['@text.emphasis'] = { italic = true },
   -- Ruby uses "TSLabel" for instance variables, for some reason. See
   -- https://github.com/tree-sitter/tree-sitter-ruby/issues/184 for more
   -- details.
