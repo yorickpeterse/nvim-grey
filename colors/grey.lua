@@ -151,6 +151,9 @@ local highlights = {
   ALEErrorSign = { fg = red, bold = true },
   ALEWarning = { fg = yellow, bold = true },
   ALEWarningSign = { fg = yellow, bold = true },
+  -- ccc.nvim
+  CccFloatNormal = { link = 'NormalFloat' },
+  CccFloatBorder = { link = 'FloatBorder' },
   -- CSS
   cssClassName = { link = 'Keyword' },
   cssColor = { link = 'Number' },
