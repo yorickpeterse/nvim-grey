@@ -273,9 +273,9 @@ local highlights = {
   netrwClassify = { link = 'Identifier' },
   -- Neogit
   NeogitBranch = { fg = green, bold = true },
-  NeogitBranchHead = { fg = red, bold = true },
+  NeogitBranchHead = { link = 'NeogitBranch' },
   NeogitCommitViewHeader = { fg = yellow, bold = true },
-  NeogitCursorLine = { link = 'CursorLine' },
+  NeogitCursorLine = { bg = highlight },
   NeogitDiffAdd = { link = 'DiffAdd' },
   NeogitDiffAddHighlight = { link = 'NeogitDiffAdd' },
   NeogitDiffContext = { link = 'Normal' },
@@ -303,7 +303,7 @@ local highlights = {
   NeogitGraphRed = { fg = red },
   NeogitGraphWhite = { fg = black },
   NeogitGraphYellow = { fg = yellow },
-  NeogitHunkHeader = { link = 'Normal' },
+  NeogitHunkHeader = { fg = blue },
   NeogitHunkHeaderHighlight = { link = 'NeogitHunkHeader' },
   NeogitPopupActionKey = { link = 'NeogitPopupOptionKey' },
   NeogitPopupBranchName = { link = 'NeogitBranch' },
@@ -314,6 +314,7 @@ local highlights = {
   NeogitPopupSectionTitle = { link = 'Title' },
   NeogitPopupSwitchEnabled = { link = 'NeogitPopupOptionEnabled' },
   NeogitPopupSwitchKey = { link = 'NeogitPopupOptionKey' },
+  NeogitRemote = { link = 'NeogitBranch' },
   -- Perl
   perlPackageDecl = { link = 'Identifier' },
   perlStatementInclude = { link = 'Statement' },
