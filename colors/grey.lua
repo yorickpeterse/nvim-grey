@@ -268,6 +268,15 @@ local highlights = {
   markdownListMarker = { link = 'Keyword' },
   markdownOrderedListMarker = { link = 'Keyword' },
   markdownUrl = { fg = blue },
+  -- mini.pick
+  MiniPickBorder = { fg = border },
+  MiniPickBorderBusy = { link = 'MiniPickBorder' },
+  MiniPickBorderText = { fg = black },
+  MiniPickHeader = { fg = black, bold = true },
+  MiniPickMatchCurrent = { bg = light_grey, bold = true },
+  MiniPickMatchRanges = { fg = dark_yellow, bold = true },
+  MiniPickNormal = { fg = black },
+  MiniPickPrompt = { fg = black, bold = true },
   -- netrw
   netrwClassify = { link = 'Identifier' },
   -- Neogit
