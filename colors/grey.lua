@@ -352,6 +352,7 @@ local highlights = {
   rustCommentLineDoc = { link = 'Comment' },
   rustFuncCall = { link = 'Identifier' },
   rustModPath = { link = 'Identifier' },
+  ['@function.macro.rust'] = { link = 'Macro' },
   -- pounce.nvim
   PounceAccept = { fg = black, bg = yellow, bold = true },
   PounceAcceptBest = { link = 'PounceAccept' },
