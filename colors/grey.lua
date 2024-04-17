@@ -353,6 +353,7 @@ local highlights = {
   rustFuncCall = { link = 'Identifier' },
   rustModPath = { link = 'Identifier' },
   ['@function.macro.rust'] = { link = 'Macro' },
+  ['@attribute.rust'] = { link = 'Identifier' },
   -- pounce.nvim
   PounceAccept = { fg = black, bg = yellow, bold = true },
   PounceAcceptBest = { link = 'PounceAccept' },
