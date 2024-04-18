@@ -35,15 +35,15 @@ when using the common display temperature of 6500K.
 
 Rust:
 
-![Rust](https://github.com/yorickpeterse/nvim-grey/assets/86065/be0f95a6-9314-4c91-872f-169c0e0e3321)
+![Rust](https://github.com/yorickpeterse/nvim-grey/assets/86065/5ae636a8-92e9-4c15-ac91-959575d7f66c)
 
 NeoVim's terminal emulator:
 
-![Terminal](https://github.com/yorickpeterse/nvim-grey/assets/86065/7dec3488-72b8-47db-a483-06ec5632b75b)
+![Terminal](https://github.com/yorickpeterse/nvim-grey/assets/86065/30256cee-aba3-46bc-ab80-8d2c4da29c50)
 
 Telescope (using the provided extension):
 
-![Telescope](https://github.com/yorickpeterse/nvim-grey/assets/86065/bdd20076-f1a8-46f0-95b5-6c0d67d14bc0)
+![Telescope](https://github.com/yorickpeterse/nvim-grey/assets/86065/9e2165be-9786-41f3-935d-88c9eed90f7f)
 
 # Requirements
 
