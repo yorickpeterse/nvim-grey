@@ -230,6 +230,7 @@ local highlights = {
   inkoCommentTitle = { fg = grey, bold = true },
   inkoInstanceVariable = { link = 'InstanceVariable' },
   inkoKeywordArgument = { link = 'Regexp' },
+  ['@property.inko'] = { link = 'inkoInstanceVariable' },
   -- Java
   javaAnnotation = { link = 'Directory' },
   javaCommentTitle = { link = 'javaComment' },
