@@ -230,7 +230,7 @@ local highlights = {
   inkoCommentTitle = { fg = grey, bold = true },
   inkoInstanceVariable = { link = 'InstanceVariable' },
   inkoKeywordArgument = { link = 'Regexp' },
-  ['@property.inko'] = { link = 'inkoInstanceVariable' },
+  ['@variable.member.inko'] = { link = 'InstanceVariable' },
   -- Java
   javaAnnotation = { link = 'Directory' },
   javaCommentTitle = { link = 'javaComment' },
@@ -411,6 +411,7 @@ local highlights = {
   ['@text.strong'] = { bold = true },
   ['@text.emphasis'] = { italic = true },
   ['@property.json'] = { bold = true },
+  ['@variable.parameter'] = { fg = orange },
   -- Ruby uses "TSLabel" for instance variables, for some reason. See
   -- https://github.com/tree-sitter/tree-sitter-ruby/issues/184 for more
   -- details.
