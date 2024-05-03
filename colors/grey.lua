@@ -198,12 +198,14 @@ local highlights = {
   FugitiveblameTime = { fg = blue },
   gitCommitOverflow = { link = 'ErrorMsg' },
   gitCommitSummary = { link = 'String' },
-
+  -- gitcommit
+  ['@string.special.url.gitcommit'] = { fg = black },
+  ['@markup.link.gitcommit'] = { fg = green, bold = true },
+  ['@comment.warning.gitcommit'] = { fg = red, bold = true },
   -- Gitsigns
   GitSignsAdd = { fg = green },
   GitSignsDelete = { fg = red },
   GitSignsChange = { fg = grey },
-
   -- HAML
   hamlClass = { fg = black },
   hamlDocType = { link = 'Comment' },
@@ -406,11 +408,12 @@ local highlights = {
   TSSymbol = { link = 'Symbol' },
   TSTypeBuiltin = { link = 'Keyword' },
   TSWarning = { link = 'Todo' },
-  ['@text.uri'] = { fg = blue },
+  ['@markup.link'] = { fg = blue },
+  ['@property.json'] = { bold = true },
+  ['@text.emphasis'] = { italic = true },
   ['@text.reference'] = { fg = purple },
   ['@text.strong'] = { bold = true },
-  ['@text.emphasis'] = { italic = true },
-  ['@property.json'] = { bold = true },
+  ['@text.uri'] = { fg = blue },
   ['@variable.builtin'] = { bold = true },
 
   -- Custom Tree-sitter captures added by this theme.
