@@ -411,7 +411,7 @@ local highlights = {
   ['@text.strong'] = { bold = true },
   ['@text.emphasis'] = { italic = true },
   ['@property.json'] = { bold = true },
-  ['@variable.parameter'] = { fg = orange },
+  ['@variable.builtin'] = { bold = true },
   -- Ruby uses "TSLabel" for instance variables, for some reason. See
   -- https://github.com/tree-sitter/tree-sitter-ruby/issues/184 for more
   -- details.
