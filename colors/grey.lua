@@ -233,6 +233,7 @@ local highlights = {
   inkoInstanceVariable = { link = 'InstanceVariable' },
   inkoKeywordArgument = { link = 'Regexp' },
   ['@variable.member.inko'] = { link = 'InstanceVariable' },
+  ['@constant.builtin.inko'] = { link = 'Keyword' },
   -- Java
   javaAnnotation = { link = 'Directory' },
   javaCommentTitle = { link = 'javaComment' },
