@@ -136,7 +136,7 @@ local highlights = {
   SnippetTabstop = {},
   Symbol = { fg = orange },
   TabLine = { fg = black, bg = light_grey },
-  TabLineFill = { fg = black, bg = border },
+  TabLineFill = { fg = black, bg = light_grey },
   TabLineSel = { fg = black, bg = background, bold = true },
   Title = { fg = black, bold = true },
   Todo = { fg = grey, bold = true },
