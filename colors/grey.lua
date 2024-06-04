@@ -163,6 +163,12 @@ local highlights = {
   cssImportant = { link = 'Keyword' },
   cssProp = { link = 'Identifier' },
   cssTagName = { link = 'Keyword' },
+  cssCustomProp = { fg = purple },
+  cssPseudoClass = { fg = orange, bold = true },
+  cssPseudoClassId = { link = 'cssPseudoClass' },
+  ['@tag.css'] = { link = 'cssIdentifier' },
+  ['@type.css'] = { link = 'cssClassName' },
+  ['@variable.css'] = { link = 'cssCustomProp' },
   -- Diffs
   DiffAdd = { bg = light_green },
   DiffChange = { bg = highlight },
