@@ -358,6 +358,8 @@ local highlights = {
   rubyRegexpSpecial = { link = 'Regexp' },
   rubyStringDelimiter = { link = 'String' },
   rubySymbol = { link = 'Symbol' },
+  ['@variable.member.ruby'] = { link = 'InstanceVariable' },
+  ['@string.special.symbol.ruby'] = { link = 'rubySymbol' },
   -- Rust
   rustCommentBlockDoc = { link = 'Comment' },
   rustCommentLineDoc = { link = 'Comment' },
@@ -400,22 +402,6 @@ local highlights = {
   TelescopeTitle = { fg = black, bold = true },
   TelescopeNormal = { fg = black },
   -- Treesitter
-  TSEmphasis = { italic = true },
-  TSField = {},
-  TSStringEscape = { fg = green, bold = true },
-  TSStrong = { bold = true },
-  TSURI = { fg = blue, underline = true },
-  TSUnderline = { underline = true },
-  TSConstMacro = { link = 'Macro' },
-  TSDanger = { link = 'Todo' },
-  TSKeywordOperator = { link = 'Keyword' },
-  TSNamespace = { link = 'Constant' },
-  TSNote = { link = 'Todo' },
-  TSProperty = { link = 'TSField' },
-  TSStringRegex = { link = 'Regexp' },
-  TSSymbol = { link = 'Symbol' },
-  TSTypeBuiltin = { link = 'Keyword' },
-  TSWarning = { link = 'Todo' },
   ['@markup.link'] = { fg = blue },
   ['@property.json'] = { bold = true },
   ['@text.emphasis'] = { italic = true },
@@ -424,21 +410,8 @@ local highlights = {
   ['@text.uri'] = { fg = blue },
   ['@variable.builtin'] = { bold = true },
   ['@string.regexp'] = { link = 'Regexp' },
-
   -- Custom Tree-sitter captures added by this theme.
   ['@variable.parameter.reference'] = { fg = orange },
-
-  -- Ruby uses "TSLabel" for instance variables, for some reason. See
-  -- https://github.com/tree-sitter/tree-sitter-ruby/issues/184 for more
-  -- details.
-  rubyTSLabel = { link = 'InstanceVariable' },
-  -- TOML
-  --
-  -- tomlTSTypeBuiltin is used for section titles (e.g. `[dependencies]`), while
-  -- tomlTSProperty is used for key-value pairs. These rules ensure the syntax
-  -- is consistent with https://github.com/cespare/vim-toml.
-  tomlTSProperty = { fg = black },
-  tomlTSTypeBuiltin = { fg = black, bold = true },
   -- Vimscript
   VimCommentTitle = { link = 'Todo' },
   VimIsCommand = { link = 'Constant' },
