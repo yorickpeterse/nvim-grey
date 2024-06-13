@@ -423,6 +423,7 @@ local highlights = {
   ['@text.strong'] = { bold = true },
   ['@text.uri'] = { fg = blue },
   ['@variable.builtin'] = { bold = true },
+  ['@string.regexp'] = { link = 'Regexp' },
 
   -- Custom Tree-sitter captures added by this theme.
   ['@variable.parameter.reference'] = { fg = orange },
