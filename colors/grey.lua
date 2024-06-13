@@ -169,6 +169,7 @@ local highlights = {
   ['@tag.css'] = { link = 'cssIdentifier' },
   ['@type.css'] = { link = 'cssClassName' },
   ['@variable.css'] = { link = 'cssCustomProp' },
+  ['@constant.css'] = { link = 'cssTagName' },
   -- Diffs
   DiffAdd = { bg = light_green },
   DiffChange = { bg = highlight },
