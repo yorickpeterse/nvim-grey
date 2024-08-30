@@ -271,6 +271,7 @@ local highlights = {
   DiagnosticHint = { fg = grey, bold = true },
   DiagnosticInfo = { fg = blue, bold = true },
   DiagnosticWarn = { fg = dark_yellow, bold = true },
+  DiagnosticDeprecated = {},
   -- Make
   makeTarget = { link = 'Function' },
   -- Markdown
