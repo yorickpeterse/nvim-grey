@@ -280,6 +280,9 @@ local highlights = {
   markdownListMarker = { link = 'Keyword' },
   markdownOrderedListMarker = { link = 'Keyword' },
   markdownUrl = { fg = blue },
+  -- mini.jump2d
+  MiniJump2dSpot = { fg = black, bg = yellow, bold = true },
+  MiniJump2dSpotAhead = { bg = light_yellow },
   -- mini.pick
   MiniPickBorder = { fg = border },
   MiniPickBorderBusy = { link = 'MiniPickBorder' },
