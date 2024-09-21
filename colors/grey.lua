@@ -183,7 +183,7 @@ local highlights = {
   -- Dot/Graphviz
   dotKeyChar = { link = 'Operator' },
   -- diffview.nvim
-  DiffviewCursorLine = { bg = highlight },
+  DiffviewCursorLine = { bold = true, bg = light_grey },
   DiffviewDiffAddAsDelete = { bg = light_red },
   DiffviewDiffDelete = { fg = light_grey },
   DiffviewDiffDeleteDim = { fg = light_grey },
