@@ -263,6 +263,7 @@ local highlights = {
   DiagnosticUnderlineWarn = { underline = true, sp = dark_yellow },
   LspDiagnosticsUnderlineError = { link = 'DiagnosticUnderlineError' },
   LspDiagnosticsUnderlineWarning = { link = 'DiagnosticUnderlineWarn' },
+  LspReferenceTarget = {},
   DiagnosticFloatingError = { fg = red, bold = true },
   DiagnosticFloatingHint = { fg = black, bold = true },
   DiagnosticFloatingInfo = { fg = blue, bold = true },
