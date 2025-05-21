@@ -405,6 +405,8 @@ local highlights = {
   SnacksPickerMatch = { fg = dark_yellow, bold = true },
   SnacksPickerDir = { fg = black },
   SnacksPickerPrompt = { fg = black, bold = true },
+  SnacksInputBorder = { link = 'FloatBorder' },
+  SnacksInputTitle = { link = 'Title' },
   -- Snippy
   SnippyPlaceholder = { link = 'SnippetTabstop' },
   -- SQL
