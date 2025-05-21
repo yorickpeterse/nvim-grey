@@ -401,6 +401,9 @@ local highlights = {
   sassId = { link = 'cssIdentifier' },
   -- Shell
   shFunctionKey = { link = 'Keyword' },
+  -- Snacks
+  SnacksPickerMatch = { fg = dark_yellow, bold = true },
+  SnacksPickerDir = { fg = black },
   -- Snippy
   SnippyPlaceholder = { link = 'SnippetTabstop' },
   -- SQL
