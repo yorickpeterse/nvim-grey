@@ -407,6 +407,8 @@ local highlights = {
   SnacksPickerPrompt = { fg = black, bold = true },
   SnacksInputBorder = { link = 'FloatBorder' },
   SnacksInputTitle = { link = 'Title' },
+  SnacksPickerRow = { link = 'Number' },
+  SnacksPickerCol = { link = 'Number' },
   -- Snippy
   SnippyPlaceholder = { link = 'SnippetTabstop' },
   -- SQL
