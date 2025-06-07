@@ -200,6 +200,7 @@ local highlights = {
   -- Flash
   FlashBackdrop = { link = 'None' },
   FlashLabel = { fg = red, bold = true },
+  FlashPromptIcon = { bold = true },
   -- Fugitive
   FugitiveblameHash = { fg = purple },
   FugitiveblameTime = { fg = blue },
