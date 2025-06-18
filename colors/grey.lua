@@ -199,7 +199,7 @@ local highlights = {
   DiffviewStatusDeleted = { fg = red, bold = true },
   -- Eyeliner
   EyelinerPrimary = { fg = red, bold = true },
-  EyelinerSecondary = { fg = yellow, bold = true },
+  EyelinerSecondary = { fg = dark_yellow, bold = true },
   EyelinerDimmed = { link = 'Comment' },
   -- Flash
   FlashBackdrop = { link = 'None' },
