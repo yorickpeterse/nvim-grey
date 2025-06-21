@@ -203,7 +203,7 @@ local highlights = {
   EyelinerDimmed = { link = 'Comment' },
   -- Flash
   FlashBackdrop = { link = 'None' },
-  FlashLabel = { fg = red, bold = true },
+  FlashLabel = { fg = black, bold = true, bg = yellow },
   FlashPromptIcon = { bold = true },
   -- Fugitive
   FugitiveblameHash = { fg = purple },
