@@ -224,9 +224,9 @@ local highlights = {
   hamlId = { fg = black },
   hamlTag = { fg = black, bold = true },
   -- hop.nvim
-  HopNextKey = { fg = red, bold = true },
-  HopNextKey1 = { fg = dark_yellow },
-  HopNextKey2 = { fg = dark_yellow },
+  HopNextKey = { fg = black, bold = true, bg = yellow },
+  HopNextKey1 = { bg = light_yellow },
+  HopNextKey2 = { bg = light_yellow },
   HopUnmatched = {},
   -- HTML
   htmlArg = { link = 'Identifier' },
