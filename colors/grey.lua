@@ -292,12 +292,12 @@ local highlights = {
   -- mini.pick
   MiniPickBorder = { fg = border },
   MiniPickBorderBusy = { link = 'MiniPickBorder' },
-  MiniPickBorderText = { fg = black },
+  MiniPickBorderText = { link = 'Comment' },
   MiniPickHeader = { fg = black, bold = true },
   MiniPickMatchCurrent = { bg = light_grey, bold = true },
   MiniPickMatchRanges = { fg = dark_yellow, bold = true },
   MiniPickNormal = { fg = black },
-  MiniPickPrompt = { fg = black, bold = true },
+  MiniPickPrompt = { fg = black },
   -- netrw
   netrwClassify = { link = 'Identifier' },
   -- Neogit
