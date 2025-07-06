@@ -424,6 +424,7 @@ local highlights = {
   SnacksInputTitle = { link = 'Title' },
   SnacksPickerRow = { link = 'Number' },
   SnacksPickerCol = { link = 'Number' },
+  SnacksPickerListCursorLine = { bg = light_grey, bold = true },
   -- Snippy
   SnippyPlaceholder = { link = 'SnippetTabstop' },
   -- SQL
