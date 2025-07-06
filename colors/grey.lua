@@ -286,6 +286,16 @@ local highlights = {
   markdownListMarker = { link = 'Keyword' },
   markdownOrderedListMarker = { link = 'Keyword' },
   markdownUrl = { fg = blue },
+  -- mini.icons
+  MiniIconsAzure = { fg = blue },
+  MiniIconsBlue = { fg = blue },
+  MiniIconsCyan = { fg = cyan },
+  MiniIconsGreen = { fg = green },
+  MiniIconsGrey = { fg = grey },
+  MiniIconsOrange = { fg = orange },
+  MiniIconsPurple = { fg = purple },
+  MiniIconsRed = { fg = red },
+  MiniIconsYellow = { fg = dark_yellow },
   -- mini.jump2d
   MiniJump2dSpot = { fg = red, bold = true },
   MiniJump2dSpotAhead = { fg = red, bold = true },
