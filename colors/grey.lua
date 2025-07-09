@@ -111,6 +111,7 @@ local highlights = {
   PmenuSbar = { bg = grey_bg_light },
   PmenuSel = { bg = light_grey, bold = true },
   PmenuThumb = { bg = light_grey },
+  PmenuMatch = { fg = dark_yellow, bold = true },
   PreCondit = { link = 'Macro' },
   PreProc = { fg = black },
   Question = { fg = black },
