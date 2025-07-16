@@ -45,7 +45,7 @@ g.terminal_color_3 = dark_yellow
 g.terminal_color_4 = blue
 g.terminal_color_5 = purple
 g.terminal_color_6 = cyan
-g.terminal_color_7 = grey
+g.terminal_color_7 = white
 
 g.terminal_color_8 = black
 g.terminal_color_9 = red
@@ -54,7 +54,7 @@ g.terminal_color_11 = dark_yellow
 g.terminal_color_12 = blue
 g.terminal_color_13 = purple
 g.terminal_color_14 = cyan
-g.terminal_color_15 = grey
+g.terminal_color_15 = white
 
 local highlights = {
   -- This highlight group can be used when one wants to disable a highlight
