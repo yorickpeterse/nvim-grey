@@ -309,6 +309,7 @@ local highlights = {
   MiniPickMatchRanges = { fg = dark_yellow, bold = true },
   MiniPickNormal = { fg = black },
   MiniPickPrompt = { fg = black },
+  MiniPickMatchMarked = { bold = true },
   -- netrw
   netrwClassify = { link = 'Identifier' },
   -- Neogit
