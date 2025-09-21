@@ -218,7 +218,10 @@ local highlights = {
   -- Gitsigns
   GitSignsAdd = { fg = green },
   GitSignsDelete = { fg = red },
-  GitSignsChange = { fg = grey },
+  GitSignsChange = { fg = dark_yellow },
+  GitSignsStagedAdd = { fg = green },
+  GitSignsStagedDelete = { fg = red },
+  GitSignsStagedChange = { fg = dark_yellow },
   -- HAML
   hamlClass = { fg = black },
   hamlDocType = { link = 'Comment' },
@@ -287,6 +290,10 @@ local highlights = {
   markdownListMarker = { link = 'Keyword' },
   markdownOrderedListMarker = { link = 'Keyword' },
   markdownUrl = { fg = blue },
+  -- mini.diff
+  MiniDiffSignAdd = { fg = green },
+  MiniDiffSignDelete = { fg = red },
+  MiniDiffSignChange = { fg = dark_yellow },
   -- mini.icons
   MiniIconsAzure = { fg = blue },
   MiniIconsBlue = { fg = blue },
