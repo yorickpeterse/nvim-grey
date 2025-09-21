@@ -216,12 +216,12 @@ local highlights = {
   ['@markup.link.gitcommit'] = { fg = green, bold = true },
   ['@comment.warning.gitcommit'] = { fg = red, bold = true },
   -- Gitsigns
-  GitSignsAdd = { fg = green },
-  GitSignsDelete = { fg = red },
-  GitSignsChange = { fg = dark_yellow },
-  GitSignsStagedAdd = { fg = green },
-  GitSignsStagedDelete = { fg = red },
-  GitSignsStagedChange = { fg = dark_yellow },
+  GitSignsAdd = { fg = border },
+  GitSignsDelete = { fg = border },
+  GitSignsChange = { fg = border },
+  GitSignsStagedAdd = { fg = border },
+  GitSignsStagedDelete = { fg = border },
+  GitSignsStagedChange = { fg = border },
   -- HAML
   hamlClass = { fg = black },
   hamlDocType = { link = 'Comment' },
@@ -291,9 +291,9 @@ local highlights = {
   markdownOrderedListMarker = { link = 'Keyword' },
   markdownUrl = { fg = blue },
   -- mini.diff
-  MiniDiffSignAdd = { fg = green },
-  MiniDiffSignDelete = { fg = red },
-  MiniDiffSignChange = { fg = dark_yellow },
+  MiniDiffSignAdd = { fg = border },
+  MiniDiffSignDelete = { fg = border },
+  MiniDiffSignChange = { fg = border },
   -- mini.icons
   MiniIconsAzure = { fg = blue },
   MiniIconsBlue = { fg = blue },
