@@ -219,9 +219,9 @@ local highlights = {
   GitSignsAdd = { fg = border },
   GitSignsDelete = { fg = border },
   GitSignsChange = { fg = border },
-  GitSignsStagedAdd = { fg = border },
-  GitSignsStagedDelete = { fg = border },
-  GitSignsStagedChange = { fg = border },
+  GitSignsStagedAdd = { fg = grey },
+  GitSignsStagedDelete = { fg = grey },
+  GitSignsStagedChange = { fg = grey },
   -- HAML
   hamlClass = { fg = black },
   hamlDocType = { link = 'Comment' },
