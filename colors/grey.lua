@@ -154,6 +154,8 @@ local highlights = {
   ALEErrorSign = { fg = red, bold = true },
   ALEWarning = { fg = dark_yellow, bold = true },
   ALEWarningSign = { fg = dark_yellow, bold = true },
+  -- Bash
+  ['@function.call.bash'] = { fg = black, bold = true },
   -- ccc.nvim
   CccFloatNormal = { link = 'NormalFloat' },
   CccFloatBorder = { link = 'FloatBorder' },
